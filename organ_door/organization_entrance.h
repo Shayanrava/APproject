@@ -15,6 +15,9 @@ public:
     explicit organization_entrance(QWidget *parent = nullptr);
     ~organization_entrance();
 
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::organization_entrance *ui;
 };

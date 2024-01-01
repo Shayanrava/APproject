@@ -11,14 +11,17 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    making_decision_for_organ.cpp \
     organization_entrance.cpp
 
 HEADERS += \
     mainwindow.h \
+    making_decision_for_organ.h \
     organization_entrance.h
 
 FORMS += \
     mainwindow.ui \
+    making_decision_for_organ.ui \
     organization_entrance.ui
 
 # Default rules for deployment.
