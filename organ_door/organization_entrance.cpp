@@ -2,6 +2,7 @@
 #include "ui_organization_entrance.h"
 #include"making_decision_for_organ.h"
 #include"key_pass_organ.h"
+#include"making_organization.h"
 organization_entrance::organization_entrance(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::organization_entrance)
@@ -25,5 +26,12 @@ void organization_entrance::on_pushButton_2_clicked()
 {
     key_pass_organ *kpo=new key_pass_organ();
     kpo->show();
+}
+
+
+void organization_entrance::on_pushButton_clicked()
+{
+    making_organization *mo=new making_organization();
+    mo->show();
 }
 

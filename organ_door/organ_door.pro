@@ -13,18 +13,21 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     making_decision_for_organ.cpp \
+    making_organization.cpp \
     organization_entrance.cpp
 
 HEADERS += \
     key_pass_organ.h \
     mainwindow.h \
     making_decision_for_organ.h \
+    making_organization.h \
     organization_entrance.h
 
 FORMS += \
     key_pass_organ.ui \
     mainwindow.ui \
     making_decision_for_organ.ui \
+    making_organization.ui \
     organization_entrance.ui
 
 # Default rules for deployment.
