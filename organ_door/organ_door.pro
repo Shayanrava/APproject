@@ -14,24 +14,21 @@ SOURCES += \
     mainwindow.cpp \
     making_decision_for_organ.cpp \
     making_organization.cpp \
-    organization_entrance.cpp \
-    removing_organization.cpp
+    organization_entrance.cpp
 
 HEADERS += \
     key_pass_organ.h \
     mainwindow.h \
     making_decision_for_organ.h \
     making_organization.h \
-    organization_entrance.h \
-    removing_organization.h
+    organization_entrance.h
 
 FORMS += \
     key_pass_organ.ui \
     mainwindow.ui \
     making_decision_for_organ.ui \
     making_organization.ui \
-    organization_entrance.ui \
-    removing_organization.ui
+    organization_entrance.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
