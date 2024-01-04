@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>making_organization</class>
- <widget class="QWidget" name="making_organization">
+ <class>removing_organization</class>
+ <widget class="QWidget" name="removing_organization">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>479</height>
+    <height>481</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#making_organization
+   <string notr="true">#removing_organization
 {
 background-color:black;
 }</string>
@@ -22,9 +22,9 @@ background-color:black;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>40</y>
-     <width>381</width>
+     <x>50</x>
+     <y>50</y>
+     <width>371</width>
      <height>20</height>
     </rect>
    </property>
@@ -35,34 +35,15 @@ color:white;
 }</string>
    </property>
    <property name="text">
-    <string>Please define a name and password for the organization</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>150</y>
-     <width>131</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#label_2
-{
-color:white;
-}</string>
-   </property>
-   <property name="text">
-    <string>Organization name:</string>
+    <string>Enter the name of the organization you want to delete:</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>112</x>
-     <y>190</y>
-     <width>191</width>
+     <x>110</x>
+     <y>150</y>
+     <width>201</width>
      <height>28</height>
     </rect>
    </property>
@@ -77,7 +58,7 @@ background-color:white;
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>440</y>
+     <y>430</y>
      <width>83</width>
      <height>29</height>
     </rect>
@@ -85,31 +66,12 @@ background-color:white;
    <property name="styleSheet">
     <string notr="true">#pushButton
 {
-background-color:white;
 color:black;
+background-color:white;
 }</string>
    </property>
    <property name="text">
     <string>OK</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>80</y>
-     <width>131</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#label_4
-{
-color:white;
-}</string>
-   </property>
-   <property name="text">
-    <string>and then press OK:</string>
    </property>
   </widget>
  </widget>
