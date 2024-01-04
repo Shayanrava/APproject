@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>making_decision_for_organ</class>
+ <widget class="QWidget" name="making_decision_for_organ">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>528</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">making_decision_for_organ
+{
+background-color:black;
+}</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>321</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Add people to the organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>321</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Removing people from the organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>321</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Changing the role of people in the organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>320</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit organization profile</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>380</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Creating a team in the organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>440</y>
+     <width>331</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Viewing the member teams in the organization</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>230</y>
+     <width>321</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>What do you want to do with this organization?</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
