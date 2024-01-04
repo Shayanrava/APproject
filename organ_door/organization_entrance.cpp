@@ -3,6 +3,7 @@
 #include"making_decision_for_organ.h"
 #include"key_pass_organ.h"
 #include"making_organization.h"
+#include"removing_organization.h"
 organization_entrance::organization_entrance(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::organization_entrance)

@@ -7,73 +7,12 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>521</height>
+    <height>481</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">#removing_organization
-{
-background-color:black;
-}</string>
-  </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>90</y>
-     <width>361</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#label
-{
-color:white;
-}</string>
-   </property>
-   <property name="text">
-    <string>Enter the name of the organization you want to delete:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>200</y>
-     <width>221</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#lineEdit
-{
-background-color:white;
-}</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>450</y>
-     <width>83</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#pushButton
-{
-color:black;
-background-color:white;
-}</string>
-   </property>
-   <property name="text">
-    <string>OK</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>
