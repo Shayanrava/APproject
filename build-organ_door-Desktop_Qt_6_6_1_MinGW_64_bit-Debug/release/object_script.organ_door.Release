@@ -1,0 +1,13 @@
+release/key_pass_organ.o
+release/main.o
+release/mainwindow.o
+release/making_decision_for_organ.o
+release/making_organization.o
+release/organization_entrance.o
+release/removing_organization.o
+release/moc_key_pass_organ.o
+release/moc_mainwindow.o
+release/moc_making_decision_for_organ.o
+release/moc_making_organization.o
+release/moc_organization_entrance.o
+release/moc_removing_organization.o

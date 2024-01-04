@@ -1,0 +1,13 @@
+debug/key_pass_organ.o
+debug/main.o
+debug/mainwindow.o
+debug/making_decision_for_organ.o
+debug/making_organization.o
+debug/organization_entrance.o
+debug/removing_organization.o
+debug/moc_key_pass_organ.o
+debug/moc_mainwindow.o
+debug/moc_making_decision_for_organ.o
+debug/moc_making_organization.o
+debug/moc_organization_entrance.o
+debug/moc_removing_organization.o
