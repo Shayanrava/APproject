@@ -39,6 +39,7 @@ void organization_entrance::on_pushButton_clicked()
 
 void organization_entrance::on_pushButton_3_clicked()
 {
-
+    removing_organization *ro=new removing_organization();
+    ro->show();
 }
 
