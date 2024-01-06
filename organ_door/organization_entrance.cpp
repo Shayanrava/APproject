@@ -51,3 +51,10 @@ void organization_entrance::on_pushButton_5_clicked()
     foz->show();
 }
 
+
+/*void organization_entrance::on_making_key_clicked()
+{
+    making_organization *mo=new making_organization();
+    mo->show();
+}*/
+

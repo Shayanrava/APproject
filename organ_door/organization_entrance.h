@@ -24,6 +24,8 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+    void on_making_key_clicked();
+
 private:
     Ui::organization_entrance *ui;
 };

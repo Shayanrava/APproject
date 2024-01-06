@@ -27,6 +27,9 @@ background-color:black;
      <height>29</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="text">
     <string>Making an organization</string>
    </property>
