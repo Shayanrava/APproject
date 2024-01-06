@@ -17,6 +17,7 @@
    <string notr="true">#Enter{
 
 background-color:black;
+
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
