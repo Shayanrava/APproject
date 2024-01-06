@@ -6,50 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>724</width>
-    <height>391</height>
+    <width>669</width>
+    <height>320</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Enter</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="signup">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>210</y>
-      <width>141</width>
-      <height>29</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#signup{
+  <property name="styleSheet">
+   <string notr="true">#Enter{
 
-color:white;
-
-border-radius:10%;
-
-background-color:rgb(238, 226, 63);
-
-}
-
-#signup:hover{
-background-color:rgb(238, 226, 63);
-
-border:6px solid rgb(232, 195, 10);
-
+background-color:black;
 }</string>
-    </property>
-    <property name="text">
-     <string>sign up</string>
-    </property>
-   </widget>
+  </property>
+  <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="signin">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>160</y>
+      <x>260</x>
+      <y>100</y>
       <width>141</width>
       <height>29</height>
      </rect>
@@ -79,8 +54,8 @@ border:6px solid rgb(232, 195, 10);
    <widget class="QLabel" name="wlcomelable">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>100</y>
+      <x>210</x>
+      <y>40</y>
       <width>241</width>
       <height>31</height>
      </rect>
@@ -101,13 +76,44 @@ border:1px solid rgb(238, 226, 63);
      <string>                Welcome to our App</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="signup">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>150</y>
+      <width>141</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#signup{
+
+color:white;
+
+border-radius:10%;
+
+background-color:rgb(238, 226, 63);
+
+}
+
+#signup:hover{
+background-color:rgb(238, 226, 63);
+
+border:6px solid rgb(232, 195, 10);
+
+}</string>
+    </property>
+    <property name="text">
+     <string>sign up</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>724</width>
+     <width>669</width>
      <height>26</height>
     </rect>
    </property>

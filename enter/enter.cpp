@@ -38,3 +38,4 @@ Enter::~Enter()
 {
     delete ui;
 }
+

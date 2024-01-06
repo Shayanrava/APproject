@@ -6,40 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>649</width>
-    <height>300</height>
+    <width>670</width>
+    <height>320</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pbnforget">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>290</y>
-     <width>121</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#pbnforget{
+  <property name="styleSheet">
+   <string notr="true">#signin{
 
-background-color:rgb(238, 226, 63);
-
-border-radius:10px;
-
+background-color:black;
 }</string>
-   </property>
-   <property name="text">
-    <string>forget password</string>
-   </property>
-  </widget>
+  </property>
   <widget class="QLineEdit" name="ledpas">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>220</y>
+     <x>230</x>
+     <y>130</y>
      <width>261</width>
      <height>26</height>
     </rect>
@@ -65,8 +49,8 @@ border:1px solid rgb(238, 226, 63);
   <widget class="QPushButton" name="pbnok">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>290</y>
+     <x>240</x>
+     <y>200</y>
      <width>93</width>
      <height>29</height>
     </rect>
@@ -84,31 +68,53 @@ border-radius:10px;
     <string>ok</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="leduser">
+  <widget class="QPushButton" name="pbnforget">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>160</y>
-     <width>261</width>
-     <height>26</height>
+     <x>370</x>
+     <y>200</y>
+     <width>121</width>
+     <height>29</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">#leduser{
+    <string notr="true">#pbnforget{
 
+background-color:rgb(238, 226, 63);
 
-border:1px solid rgb(238, 226, 63);
-
-
+border-radius:10px;
 
 }</string>
+   </property>
+   <property name="text">
+    <string>forget password</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbluser">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>70</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#lbluser{
+
+color:rgb(238, 226, 63);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;username &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="lblpas">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>220</y>
+     <x>160</x>
+     <y>130</y>
      <width>63</width>
      <height>20</height>
     </rect>
@@ -123,24 +129,24 @@ color:rgb(238, 226, 63);
     <string>password</string>
    </property>
   </widget>
-  <widget class="QLabel" name="lbluser">
+  <widget class="QLineEdit" name="leduser">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>160</y>
-     <width>71</width>
-     <height>20</height>
+     <x>230</x>
+     <y>70</y>
+     <width>261</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">#lbluser{
+    <string notr="true">#leduser{
 
-color:rgb(238, 226, 63);
+
+border:1px solid rgb(238, 226, 63);
+
+
 
 }</string>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;username &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>
