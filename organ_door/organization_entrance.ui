@@ -28,7 +28,16 @@ background-color:black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">#pushButton:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton
+{
+background-color:white;
+border-radius:10px;
+}</string>
    </property>
    <property name="text">
     <string>Making an organization</string>
@@ -43,6 +52,18 @@ background-color:black;
      <height>29</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_2:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_2
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
    <property name="text">
     <string>Log in to organization</string>
    </property>
@@ -55,6 +76,18 @@ background-color:black;
      <width>341</width>
      <height>29</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_3:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_3
+{
+background-color:white;
+border-radius:10px;
+}</string>
    </property>
    <property name="text">
     <string>Removing an organization</string>
@@ -69,6 +102,18 @@ background-color:black;
      <height>29</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_4:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_4
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
    <property name="text">
     <string>View all organizations</string>
    </property>
@@ -82,6 +127,18 @@ background-color:black;
      <height>29</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_5:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_5
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
    <property name="text">
     <string>Filtering organizations</string>
    </property>
@@ -94,6 +151,18 @@ background-color:black;
      <width>341</width>
      <height>29</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_6:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_6
+{
+background-color:white;
+border-radius:10px;
+}</string>
    </property>
    <property name="text">
     <string>Sorting organizations</string>

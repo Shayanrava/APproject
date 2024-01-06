@@ -83,10 +83,15 @@ background-color:white;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">#pushButton
+    <string notr="true">#pushButton:hover
 {
 background-color:white;
-color:black;
+order:1px solidgreen; 
+}
+#pushButton
+{
+background-color:white;
+border-radius:10px;
 }</string>
    </property>
    <property name="text">

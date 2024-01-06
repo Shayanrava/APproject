@@ -29,7 +29,16 @@ background-color:black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">#pushButton:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton
+{
+background-color:white;
+border-radius:10px;
+}</string>
    </property>
    <property name="text">
     <string>Add people to the organization</string>
@@ -44,6 +53,18 @@ background-color:black;
      <height>29</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_2:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_2
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
    <property name="text">
     <string>Removing people from the organization</string>
    </property>
@@ -56,6 +77,18 @@ background-color:black;
      <width>321</width>
      <height>29</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_3:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_3
+{
+background-color:white;
+border-radius:10px;
+}</string>
    </property>
    <property name="text">
     <string>Changing the role of people in the organization</string>
@@ -70,6 +103,18 @@ background-color:black;
      <height>29</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_4:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_4
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
    <property name="text">
     <string>Edit organization profile</string>
    </property>
@@ -83,6 +128,18 @@ background-color:black;
      <height>29</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_5:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_5
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
    <property name="text">
     <string>Creating a team in the organization</string>
    </property>
@@ -95,6 +152,18 @@ background-color:black;
      <width>331</width>
      <height>29</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pushButton_6:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pushButton_6
+{
+background-color:white;
+border-radius:10px;
+}</string>
    </property>
    <property name="text">
     <string>Viewing the member teams in the organization</string>

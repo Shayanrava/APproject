@@ -22,7 +22,7 @@ background-color:black;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>90</x>
      <y>50</y>
      <width>391</width>
      <height>20</height>
@@ -35,7 +35,7 @@ color:white;
 }</string>
    </property>
    <property name="text">
-    <string> Enter the name and password of the desired organization</string>
+    <string> Enter the name of the desired organization</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
