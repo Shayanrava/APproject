@@ -4,6 +4,7 @@
 #include"key_pass_organ.h"
 #include"making_organization.h"
 #include"removing_organization.h"
+#include"filtering_organizations.h"
 organization_entrance::organization_entrance(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::organization_entrance)
@@ -41,5 +42,12 @@ void organization_entrance::on_pushButton_3_clicked()
 {
     removing_organization *ro=new removing_organization();
     ro->show();
+}
+
+
+void organization_entrance::on_pushButton_5_clicked()
+{
+    filtering_organizations *foz=new filtering_organizations();
+    foz->show();
 }
 

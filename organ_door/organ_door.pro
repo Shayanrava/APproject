@@ -9,23 +9,28 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    filtering_organizations.cpp \
     key_pass_organ.cpp \
     main.cpp \
     mainwindow.cpp \
     making_decision_for_organ.cpp \
     making_organization.cpp \
     organization_entrance.cpp \
-    removing_organization.cpp
+    removing_organization.cpp \
+    task.cpp
 
 HEADERS += \
+    filtering_organizations.h \
     key_pass_organ.h \
     mainwindow.h \
     making_decision_for_organ.h \
     making_organization.h \
     organization_entrance.h \
-    removing_organization.h
+    removing_organization.h \
+    task.h
 
 FORMS += \
+    filtering_organizations.ui \
     key_pass_organ.ui \
     mainwindow.ui \
     making_decision_for_organ.ui \
