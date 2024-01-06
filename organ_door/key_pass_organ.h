@@ -1,6 +1,6 @@
 #ifndef KEY_PASS_ORGAN_H
 #define KEY_PASS_ORGAN_H
-
+//
 #include <QWidget>
 
 namespace Ui {
