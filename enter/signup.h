@@ -2,6 +2,9 @@
 #define SIGNUP_H
 
 #include <QWidget>
+#include<QFile>
+#include <QTimer>
+#include<QTextStream>
 
 namespace Ui {
 class signup;
@@ -14,8 +17,13 @@ class signup : public QWidget
 public:
     explicit signup(QWidget *parent = nullptr);
     ~signup();
+public slots:
+    void saveinfo();
+
 
 private:
+    QFile*file;
+
     Ui::signup *ui;
 };
 
