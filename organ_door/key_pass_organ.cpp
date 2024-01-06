@@ -17,5 +17,6 @@ void key_pass_organ::on_pushButton_clicked()
 {
     making_decision_for_organ *mdd=new making_decision_for_organ();
     mdd->show();
+    this->close();
 }
 
