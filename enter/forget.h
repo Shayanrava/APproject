@@ -2,6 +2,8 @@
 #define FORGET_H
 
 #include <QWidget>
+#include<QFile>
+#include<QTimer>
 
 namespace Ui {
 class forget;
@@ -14,6 +16,10 @@ class forget : public QWidget
 public:
     explicit forget(QWidget *parent = nullptr);
     ~forget();
+
+
+public slots:
+    void readinfo();
 
 private:
     Ui::forget *ui;
