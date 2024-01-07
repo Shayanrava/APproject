@@ -6,20 +6,124 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>529</width>
+    <height>655</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>entrance_organ</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="styleSheet">
+   <string notr="true">#entrance_organ
+{
+background-color:black;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pbn_making">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>371</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Making an organization</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbn_login">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>80</y>
+      <width>371</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Login to organization</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbn_removing">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>140</y>
+      <width>371</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Removing an organization</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbn_view">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>410</y>
+      <width>361</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>View all organizations</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbn_filter">
+    <property name="geometry">
+     <rect>
+      <x>102</x>
+      <y>470</y>
+      <width>361</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Filtering organizations</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbn_sort">
+    <property name="geometry">
+     <rect>
+      <x>102</x>
+      <y>530</y>
+      <width>361</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sorting organizations</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_do">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>270</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#label_do
+{
+color:white;
+}</string>
+    </property>
+    <property name="text">
+     <string>What do tou want to do?</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>529</width>
      <height>25</height>
     </rect>
    </property>

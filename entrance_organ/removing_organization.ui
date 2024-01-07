@@ -7,12 +7,37 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>429</height>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#removing_organization
+{
+background-color:black;
+}</string>
+  </property>
+  <widget class="QLabel" name="remov_label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>60</y>
+     <width>361</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#remov_label
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Enter the name of the organization you want to delete:</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
