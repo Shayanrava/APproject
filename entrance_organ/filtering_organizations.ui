@@ -6,13 +6,117 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>512</height>
+    <width>672</width>
+    <height>322</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#filtering_organizations
+{
+background-color:black;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>60</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Enter the desired word:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>90</y>
+     <width>321</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_2
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>(For the entered word, organizations that have</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>120</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_3
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>this name will be displayed.)</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_filter">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>170</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#led_filter
+{
+background-color:white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_filter">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>270</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_filter:hover
+{
+background-color:white;
+order:1px solidgreen; 
+}
+#pbn_filter
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

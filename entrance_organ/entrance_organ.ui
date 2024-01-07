@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>529</width>
-    <height>655</height>
+    <width>671</width>
+    <height>391</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,11 +23,23 @@ background-color:black;
    <widget class="QPushButton" name="pbn_making">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>20</y>
+      <x>170</x>
+      <y>30</y>
       <width>371</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pbn_making:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_making
+{
+background-color:white;
+border-radius:10px;
+}</string>
     </property>
     <property name="text">
      <string>Making an organization</string>
@@ -36,11 +48,23 @@ background-color:black;
    <widget class="QPushButton" name="pbn_login">
     <property name="geometry">
      <rect>
-      <x>92</x>
+      <x>170</x>
       <y>80</y>
       <width>371</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pbn_login:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_login
+{
+background-color:white;
+border-radius:10px;
+}</string>
     </property>
     <property name="text">
      <string>Login to organization</string>
@@ -49,11 +73,23 @@ background-color:black;
    <widget class="QPushButton" name="pbn_removing">
     <property name="geometry">
      <rect>
-      <x>92</x>
-      <y>140</y>
+      <x>170</x>
+      <y>130</y>
       <width>371</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pbn_removing:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_removing
+{
+background-color:white;
+border-radius:10px;
+}</string>
     </property>
     <property name="text">
      <string>Removing an organization</string>
@@ -62,11 +98,23 @@ background-color:black;
    <widget class="QPushButton" name="pbn_view">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>410</y>
+      <x>180</x>
+      <y>230</y>
       <width>361</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pbn_view:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_view
+{
+background-color:white;
+border-radius:10px;
+}</string>
     </property>
     <property name="text">
      <string>View all organizations</string>
@@ -75,11 +123,23 @@ background-color:black;
    <widget class="QPushButton" name="pbn_filter">
     <property name="geometry">
      <rect>
-      <x>102</x>
-      <y>470</y>
+      <x>180</x>
+      <y>280</y>
       <width>361</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pbn_filter:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_filter
+{
+background-color:white;
+border-radius:10px;
+}</string>
     </property>
     <property name="text">
      <string>Filtering organizations</string>
@@ -88,11 +148,23 @@ background-color:black;
    <widget class="QPushButton" name="pbn_sort">
     <property name="geometry">
      <rect>
-      <x>102</x>
-      <y>530</y>
+      <x>180</x>
+      <y>330</y>
       <width>361</width>
       <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#pbn_sort:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_sort
+{
+background-color:white;
+border-radius:10px;
+}</string>
     </property>
     <property name="text">
      <string>Sorting organizations</string>
@@ -101,8 +173,8 @@ background-color:black;
    <widget class="QLabel" name="label_do">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>270</y>
+      <x>280</x>
+      <y>180</y>
       <width>171</width>
       <height>20</height>
      </rect>
@@ -123,7 +195,7 @@ color:white;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>529</width>
+     <width>671</width>
      <height>25</height>
     </rect>
    </property>

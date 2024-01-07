@@ -6,13 +6,98 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>513</height>
+    <width>670</width>
+    <height>319</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#add_people
+{
+background-color:black;
+}</string>
+  </property>
+  <widget class="QPushButton" name="pbn_addPepole">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>270</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_addPepole:hover
+{
+background-color:white;
+order:1px solidgreen; 
+}
+#pbn_addPepole
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_addPepole">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>180</y>
+     <width>231</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#led_addPepole
+{
+background-color:white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>80</y>
+     <width>271</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Enter the name of the person you want</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>120</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_2
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>to add to the organization:</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

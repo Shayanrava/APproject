@@ -6,13 +6,117 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>478</height>
+    <width>669</width>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#making_organization
+{
+background-color:black;
+}</string>
+  </property>
+  <widget class="QLabel" name="label_">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>40</y>
+     <width>331</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Please define a name for the organization</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>70</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_2
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>and then press OK:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_organName">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>160</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_organName
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Organization name:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_making">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>160</y>
+     <width>201</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#led_making
+{
+background-color:white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_making">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>270</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_making:hover
+{
+background-color:white;
+order:1px solidgreen; 
+}
+#pbn_making
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

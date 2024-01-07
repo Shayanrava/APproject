@@ -17,6 +17,15 @@ public:
     entrance_organ(QWidget *parent = nullptr);
     ~entrance_organ();
 
+private slots:
+    void on_pbn_making_clicked();
+
+    void on_pbn_removing_clicked();
+
+    void on_pbn_filter_clicked();
+
+    void on_pbn_login_clicked();
+
 private:
     Ui::entrance_organ *ui;
 };

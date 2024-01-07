@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>453</height>
+    <width>670</width>
+    <height>320</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@ background-color:black;
   <widget class="QLabel" name="remov_label">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>210</x>
      <y>60</y>
      <width>361</width>
      <height>20</height>
@@ -36,6 +36,66 @@ color:white;
    </property>
    <property name="text">
     <string>Enter the name of the organization you want to delete:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_remove">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>160</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#led_remove
+{
+background-color:white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_remove">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>260</y>
+     <width>83</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_remove:hover
+{
+background-color:white;
+order:1px solidgreen; 
+}
+#pbn_remove
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labe_remove_name">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>160</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#labe_remove_name
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>Organization name:</string>
    </property>
   </widget>
  </widget>

@@ -15,6 +15,9 @@ public:
     explicit making_decision_for_organ(QWidget *parent = nullptr);
     ~making_decision_for_organ();
 
+private slots:
+    void on_pbn_pepoleTooRGAN_clicked();
+
 private:
     Ui::making_decision_for_organ *ui;
 };
