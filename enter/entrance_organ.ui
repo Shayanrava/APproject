@@ -13,6 +13,12 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#entrance_organ
+{
+background-color:black;
+}</string>
+  </property>
   <widget class="QLabel" name="label_do">
    <property name="geometry">
     <rect>
