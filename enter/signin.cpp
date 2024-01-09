@@ -11,6 +11,7 @@ signin::signin(QWidget *parent) :
     forgetpassword=new forget();
   connect(ui->pbnok,SIGNAL(clicked()),this,SLOT(readinfo()));
   connect(ui->pbnforget,SIGNAL(clicked()),this,SLOT(closesignin()));
+  entertomenue=new entrance_organ();
 }
 
 signin::~signin()
@@ -67,6 +68,8 @@ if(ui->leduser->text()==listuser[i]&&ui->ledpas->text()==listuser[i+1]){
     ui->leduser->setStyleSheet("background-color:green;");
      ui->ledpas->setStyleSheet("background-color:green;");
      ui->ledpas->setText("Login successful");
+     this->close();
+     entertomenue->show();
      break;
 }
 else{

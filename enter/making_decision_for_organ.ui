@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>making_decision_for_organ</class>
+ <widget class="QWidget" name="making_decision_for_organ">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>735</width>
+    <height>362</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pbn_viewMember">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>310</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_viewMember:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_viewMember
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Viewing the member teams in the organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_pepoleTooRGAN">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>10</y>
+     <width>341</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_pepoleTooRGAN:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_pepoleTooRGAN
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Add people to the organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_Edit">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>230</y>
+     <width>341</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_Edit:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_Edit
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Edit organization profile</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>170</y>
+     <width>331</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>What do you want to do with this organization?</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_creatTeam">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>270</y>
+     <width>341</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_creatTeam:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_creatTeam
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Creating a team in the organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_changRole">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>100</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_changRole:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_changRole
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Changing the role of people in the organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_removePepole">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>50</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_removePepole:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_removePepole
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Removing people from the organization</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -5,6 +5,7 @@
 #include<QFile>
 #include<QTimer>
 #include"forget.h"
+#include "entrance_organ.h"
 
 
 namespace Ui {
@@ -28,6 +29,7 @@ private:
     forget* forgetpassword;
 
     Ui::signin *ui;
+    entrance_organ *entertomenue;
 
 
 };
