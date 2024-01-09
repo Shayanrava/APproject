@@ -13,6 +13,12 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#removing_organization
+{
+background-color:black;
+}</string>
+  </property>
   <widget class="QPushButton" name="pbn_remove">
    <property name="geometry">
     <rect>
@@ -41,7 +47,7 @@ border-radius:10px;
   <widget class="QLineEdit" name="led_remove">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>360</x>
      <y>130</y>
      <width>181</width>
      <height>28</height>
@@ -57,7 +63,7 @@ background-color:white;
   <widget class="QLabel" name="labe_remove_name">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>200</x>
      <y>130</y>
      <width>131</width>
      <height>20</height>
@@ -76,7 +82,7 @@ color:white;
   <widget class="QLabel" name="remov_label">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>180</x>
      <y>30</y>
      <width>361</width>
      <height>20</height>
