@@ -13,10 +13,16 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#key_pass_organ
+{
+background-color:black;
+}</string>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>220</x>
      <y>50</y>
      <width>301</width>
      <height>20</height>
@@ -35,7 +41,7 @@ color:white;
   <widget class="QLabel" name="label_pass">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>140</x>
      <y>180</y>
      <width>141</width>
      <height>20</height>
@@ -54,8 +60,8 @@ color:white;
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>90</y>
+     <x>290</x>
+     <y>80</y>
      <width>131</width>
      <height>20</height>
     </rect>
@@ -73,7 +79,7 @@ color:white;
   <widget class="QLineEdit" name="led_pass">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>300</x>
      <y>180</y>
      <width>221</width>
      <height>28</height>
