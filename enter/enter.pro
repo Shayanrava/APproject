@@ -18,6 +18,8 @@ SOURCES += \
     enter.cpp \
     making_decision_for_organ.cpp \
     making_organization.cpp \
+    organ_task.cpp \
+    person.cpp \
     removing_organization.cpp \
     signin.cpp \
     signup.cpp \
@@ -32,6 +34,8 @@ HEADERS += \
     key_pass_organ.h \
     making_decision_for_organ.h \
     making_organization.h \
+    organ_task.h \
+    person.h \
     removing_organization.h \
     signin.h \
     signup.h \
