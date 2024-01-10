@@ -20,7 +20,8 @@ SOURCES += \
     making_organization.cpp \
     removing_organization.cpp \
     signin.cpp \
-    signup.cpp
+    signup.cpp \
+    task.cpp
 
 HEADERS += \
     add_people.h \
@@ -33,7 +34,8 @@ HEADERS += \
     making_organization.h \
     removing_organization.h \
     signin.h \
-    signup.h
+    signup.h \
+    task.h
 
 FORMS += \
     add_people.ui \
