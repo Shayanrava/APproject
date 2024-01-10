@@ -96,7 +96,7 @@ background-color:white;
    <property name="geometry">
     <rect>
      <x>550</x>
-     <y>270</y>
+     <y>260</y>
      <width>83</width>
      <height>29</height>
     </rect>
