@@ -5,18 +5,22 @@
 class organ_task
 {
     QString organ_name;
+    QString project_name;
     task work;
 public:
     organ_task();
 
-    QString get_name();
-    QString get_task_work();
-    QString get_task_date();
-    bool get_task_archive();
+    QString get_projectName();
+    QString get_organName();
+    QString get_workTask();
+    QString get_workFinish();
+    bool get_workArchive();
 
-    void set_name(QString);
-    void set_work(QString,QString);
-    void set_archive();
+    void set_projectName(QString);
+    void set_organName(QString);
+    void set_workFinish(QString);
+    void set_workTask(QString);
+    void set_workArchive();
 };
 
 #endif // ORGAN_TASK_H

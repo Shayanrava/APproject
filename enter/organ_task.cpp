@@ -2,38 +2,53 @@
 
 organ_task::organ_task() {}
 
-QString organ_task::get_name()
+QString organ_task::get_organName()
 {
     return organ_name;
 }
 
-QString organ_task::get_task_work()
+QString organ_task::get_workTask()
 {
     return work.get_task();
 }
 
-QString organ_task::get_task_date()
+QString organ_task::get_projectName()
+{
+    return project_name;
+}
+
+QString organ_task::get_workFinish()
 {
     return work.get_date_finish();
 }
 
-bool organ_task::get_task_archive()
+bool organ_task::get_workArchive()
 {
     return work.get_archive();
 }
 
-void organ_task::set_name(QString name)
+void organ_task::set_organName(QString Name)
 {
-    organ_name=name;
+    organ_name=Name;
 }
 
-void organ_task::set_work(QString time_finish,QString Work)
+void organ_task::set_workFinish(QString TimeFinish)
 {
-    work.set_datefinis(time_finish);
-    work.set_taskwork(Work);
+    work.set_datefinis(TimeFinish);
+
+}
+void organ_task::set_workTask(QString Task ){
+
+    work.set_taskwork(Task);
+
 }
 
-void organ_task::set_archive()
+void organ_task::set_projectName(QString Name)
+{
+    project_name=Name;
+}
+
+void organ_task::set_workArchive()
 {
     work.set_archive();
 }
