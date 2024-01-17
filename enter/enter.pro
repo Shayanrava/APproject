@@ -21,6 +21,7 @@ SOURCES += \
     making_organization.cpp \
     organ_task.cpp \
     person.cpp \
+    project.cpp \
     removing_organization.cpp \
     signin.cpp \
     signup.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     making_organization.h \
     organ_task.h \
     person.h \
+    project.h \
     removing_organization.h \
     signin.h \
     signup.h \
