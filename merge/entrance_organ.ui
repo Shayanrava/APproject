@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>entrance_organ</class>
+ <widget class="QWidget" name="entrance_organ">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>697</width>
+    <height>512</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pbn_removing">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>240</y>
+     <width>371</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_removing:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_removing
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Removing an organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_view">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>340</y>
+     <width>361</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_view:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_view
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>View all organizations</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_sort">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>440</y>
+     <width>361</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_sort:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_sort
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Sorting organizations</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_making">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>130</y>
+     <width>371</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_making:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_making
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Making an organization</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_filter">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>390</y>
+     <width>361</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_filter:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_filter
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Filtering organizations</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_login">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>190</y>
+     <width>371</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_login:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#pbn_login
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Login to organization</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_do">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>290</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label_do
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>What do tou want to do?</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

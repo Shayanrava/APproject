@@ -10,7 +10,6 @@ CONFIG += c++17
 
 SOURCES += \
     add_people.cpp \
-    admins.cpp \
     entrance_organ.cpp \
     filtering_organizations.cpp \
     forget.cpp \
@@ -19,16 +18,12 @@ SOURCES += \
     enter.cpp \
     making_decision_for_organ.cpp \
     making_organization.cpp \
-    organ_task.cpp \
-    person.cpp \
     removing_organization.cpp \
     signin.cpp \
-    signup.cpp \
-    task.cpp
+    signup.cpp
 
 HEADERS += \
     add_people.h \
-    admins.h \
     enter.h \
     entrance_organ.h \
     filtering_organizations.h \
@@ -36,12 +31,9 @@ HEADERS += \
     key_pass_organ.h \
     making_decision_for_organ.h \
     making_organization.h \
-    organ_task.h \
-    person.h \
     removing_organization.h \
     signin.h \
-    signup.h \
-    task.h
+    signup.h
 
 FORMS += \
     add_people.ui \
