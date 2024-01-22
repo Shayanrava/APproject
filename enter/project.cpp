@@ -77,21 +77,205 @@ QString project::adminFind(int Index)
 void project::addMember(QString UserName,QString TaskWork,QString DateFinish)
 {
 
+    for(int i=0;i<personels.length();i++){
+
+        if(personels[i].user_get_name()==UserName){
+            return;
+        }
+    }
+
+
+    QString address=UserName+".txt";
+
+//    organ  projectname  task  time  archive
+
+    QFile file(address);
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text|QIODevice::Append)){
+
+           QTextStream outStream(&file);
+
+
+            outStream<<organName<<"  ";
+            outStream<<projectName<<"  ";
+            outStream<<TaskWork<<"  ";
+            outStream<<DateFinish<<"  ";
+            outStream<<true<<"  ";
+
+             file.close();
+
+        Person tmp;
+
+       tmp.newTask( DateFinish,TaskWork,organName,projectName);
+tmp.user_set_name(UserName);
+
+personels.push_back(tmp);
+
+    }
+
+
+
 }
 
 void project::removeMember(QString Name)
 {
+
+
     for(int i=0;i<personels.length();i++)
     {
         if(personels[i].user_get_name()==Name)
         {
+
             personels.remove(i);
-        }
+
+            break;
+
+             }
+
+
+        if(i==personels.length()-1){
+
+            return;
+         }
     }
+
+
+    QString address=Name+".txt";
+
+     QFile file(address);
+
+
+     if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
+
+         QString useread( file.readAll());
+
+         file.close();
+
+         QStringList listuser;
+
+         listuser=useread.split("  ");
+
+
+
+         for(int i=0;i<listuser.length();i++){
+
+             if(listuser[i]==organName&&listuser[i+1]==projectName){
+
+                 for(int j=i;j<listuser.length()-5;j++){
+
+                     listuser[j]=listuser[j+5];
+                 }
+                 break;
+
+             }
+
+
+         }
+
+
+         if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
+
+             for(int i=0;i<listuser.length()-5;i++){
+
+                   QTextStream outStream(&file);
+
+                   outStream<<listuser[i]<<"  ";
+
+
+             }
+
+             file.close();
+             return;
+         }
+
+
+
+    }
+
+
+
 }
 
 QString project::memberFind(int Index)
 {
     return personels[Index].user_get_name();
 }
+
+void project::setTaskMember(QString Name,QString NewTask){
+
+
+    for(int i=0;i<personels.length();i++)
+    {
+        if(personels[i].user_get_name()==Name)
+        {
+
+            personels[i].setTask(projectName,organName,NewTask);
+
+            break;
+
+             }
+
+
+        if(i==personels.length()-1){
+
+            return;
+         }
+    }
+
+
+    QString address=Name+".txt";
+
+     QFile file(address);
+
+
+     if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
+
+         QString useread( file.readAll());
+
+         file.close();
+
+         QStringList listuser;
+
+         listuser=useread.split("  ");
+
+
+
+         for(int i=0;i<listuser.length();i++){
+
+             if(listuser[i] == organName  &&  listuser[i+1] == projectName){
+
+
+
+                     listuser[i+2]=NewTask;
+
+                 break;
+
+             }
+
+
+         }
+
+
+         if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
+
+             for(int i=0;i<listuser.length();i++){
+
+                   QTextStream outStream(&file);
+
+                   outStream<<listuser[i]<<"  ";
+
+
+             }
+
+             file.close();
+             return;
+         }
+
+
+
+    }
+
+
+
+}
+
 

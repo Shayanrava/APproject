@@ -174,12 +174,7 @@ outStream<<User<<" ";
                 outStream<<PhoneNumber<<" ";
 
 
-
-
                 file->close();
-
-
-
 
 
 }

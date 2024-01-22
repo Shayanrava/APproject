@@ -4,6 +4,9 @@
 #include "admins.h"
 #include<QVector>
 #include<QString>
+#include<QFile>
+#include<QTextStream>
+
 class project
 {
     QString projectName;
@@ -42,7 +45,7 @@ QString adminFind(int);
   void addMember(QString,QString,QString);
   void removeMember(QString);
   QString memberFind(int);
-  void setTaskMember(QString,QString,QString);
+  void setTaskMember(QString,QString);//need file
 
 
 };

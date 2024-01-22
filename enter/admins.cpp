@@ -37,7 +37,7 @@ QString admins::remove(QString name)
 
             admins_name.remove(i);
 
-
+         return "Admin removed successfully";
         }
      if(i==admins_name.length()-1)
         {
