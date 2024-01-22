@@ -24,6 +24,7 @@ public:
     organ_task yourTask(QString,QString);
     organ_task yourTask(int);
 
+
 //    تنظیم کردن ویژگی های وظیفه
     void setNameProject(QString,QString,QString);
     void setNameProject(int,QString);
