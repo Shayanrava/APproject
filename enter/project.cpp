@@ -57,3 +57,41 @@ bool project::getTaskArchive()
 {
     return task_of_projects.get_archive();
 }
+
+void project::newAdmin(QString NewName)
+{
+    admins_of_projects.new_admin(NewName);
+}
+
+QString project::removeAdmin(QString Remove)
+{
+    return admins_of_projects.remove(Remove);
+    
+}
+
+QString project::adminFind(int Index)
+{
+    return admins_of_projects.get_name(Index);
+}
+
+void project::addMember(QString UserName,QString TaskWork,QString DateFinish)
+{
+
+}
+
+void project::removeMember(QString Name)
+{
+    for(int i=0;i<personels.length();i++)
+    {
+        if(personels[i].user_get_name()==Name)
+        {
+            personels.remove(i);
+        }
+    }
+}
+
+QString project::memberFind(int Index)
+{
+    return personels[Index].user_get_name();
+}
+
