@@ -46,6 +46,7 @@ QString adminFind(int);
   void removeMember(QString);
   QString memberFind(int);
   void setTaskMember(QString,QString);
+  void setTimeMember(QString,QString);
 
 
 };
