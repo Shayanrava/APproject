@@ -279,3 +279,83 @@ void project::setTaskMember(QString Name,QString NewTask){
 }
 
 
+
+void project::setTimeMember(QString Name,QString NewTime){
+
+
+    for(int i=0;i<personels.length();i++)
+    {
+        if(personels[i].user_get_name()==Name)
+        {
+
+            personels[i].setdatefinish(projectName,organName,NewTime);
+
+            break;
+
+             }
+
+
+        if(i==personels.length()-1){
+
+            return;
+         }
+    }
+
+
+    QString address=Name+".txt";
+
+     QFile file(address);
+
+
+     if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
+
+         QString useread( file.readAll());
+
+         file.close();
+
+         QStringList listuser;
+
+         listuser=useread.split("  ");
+
+
+
+         for(int i=0;i<listuser.length();i++){
+
+             if(listuser[i] == organName  &&  listuser[i+1] == projectName){
+
+
+
+                     listuser[i+3]=NewTime;
+
+                 break;
+
+             }
+
+
+         }
+
+
+         if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
+
+             for(int i=0;i<listuser.length();i++){
+
+                   QTextStream outStream(&file);
+
+                   outStream<<listuser[i]<<"  ";
+
+
+             }
+
+             file.close();
+             return;
+         }
+
+
+
+    }
+
+
+
+}
+
+

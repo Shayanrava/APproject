@@ -45,7 +45,7 @@ QString adminFind(int);
   void addMember(QString,QString,QString);
   void removeMember(QString);
   QString memberFind(int);
-  void setTaskMember(QString,QString);//need file
+  void setTaskMember(QString,QString);
 
 
 };
