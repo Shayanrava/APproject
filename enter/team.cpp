@@ -49,3 +49,70 @@ QString team::getOrganProject(){
    return teamProject.getOrgan();
 
 }
+
+
+void team::setTaskProject(QString Time){
+
+    teamProject.setTaskTime(Time);
+
+}
+
+void team::setTaskTimeProject(QString TaskString){
+
+    teamProject.setTask(TaskString);
+
+}
+
+void team::setTaskArchiveProject(){
+
+    teamProject.setTaskArchive();
+}
+
+QString team::getTaskTitleProject(){
+
+    return teamProject.getTaskTitle();
+}
+
+QString team::getTaskTimeProject(){
+
+     return teamProject.getTaskTime();
+}
+
+bool team::getTaskArchiveProject(){
+
+    return teamProject.getTaskArchive();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

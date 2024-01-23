@@ -6,8 +6,12 @@ class admins
 {
     QVector<QString>admins_name;
 public:
+
     admins();
+
+
     void new_admin(QString);
+
     QString get_name(int);
 
     QString remove(QString);
