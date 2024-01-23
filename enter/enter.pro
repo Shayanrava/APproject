@@ -20,12 +20,14 @@ SOURCES += \
     making_decision_for_organ.cpp \
     making_organization.cpp \
     organ_task.cpp \
+    organization.cpp \
     person.cpp \
     project.cpp \
     removing_organization.cpp \
     signin.cpp \
     signup.cpp \
-    task.cpp
+    task.cpp \
+    team.cpp
 
 HEADERS += \
     add_people.h \
@@ -38,12 +40,14 @@ HEADERS += \
     making_decision_for_organ.h \
     making_organization.h \
     organ_task.h \
+    organization.h \
     person.h \
     project.h \
     removing_organization.h \
     signin.h \
     signup.h \
-    task.h
+    task.h \
+    team.h
 
 FORMS += \
     add_people.ui \
