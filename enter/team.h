@@ -10,50 +10,41 @@ class team
     
     admins teamLeaders;
 
-    project teamProject;
+    task taskTeam;
+
+    QVector<QString>personels;
+
+
+
+
     
 public:
     team();
 // --------------------------------------
-    void addAdminTeam(QString);
+    bool addAdminTeam(QString);
 
-    void removeAdminTeam(QString);
+    bool removeAdminTeam(QString);
 
     QString adminsTeam(int);
 // ----------------------------------
-    void setNameProject(QString);
+    void setTaskTime(QString );
 
-    QString getNameProject();
+    void setTaskTitle(QString);
 
-    void setOrganProject(QString);
+    void setTaskArchive();
 
-    QString getOrganProject();
+    bool getTaskArchive();
 
-//    ------------------------------------
+    QString getTaskTitle();
 
-    void setTaskProject(QString);
+    QString getTaskTime();
 
-    void setTaskTimeProject(QString );
+//----------------------------------------
+   bool addMember(QString);
 
-    void setTaskArchiveProject();
+    QString getMember(int);
 
-    QString getTaskTitleProject();
-
-    QString getTaskTimeProject();
-
-    bool getTaskArchiveProject();
-
-//   ---------------------------------
-
-    void addMember(QString,QString,QString);
-
-    void removeMember(QString);
-
-    QString memberFind(int);
-
-    void setTaskMember(QString,QString);
-
-    void setTimeMember(QString,QString);
+    bool removeMember(QString);
 
 
 };

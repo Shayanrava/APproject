@@ -7,16 +7,37 @@ team::team()
 
 
 
-void team::addAdminTeam(QString Name){
+bool team::addAdminTeam(QString Name){
 
-    teamLeaders.new_admin(Name);
+    for(int i=0;i<personels.length();i++){
 
+           if(personels[i]==Name){
+
+               teamLeaders.new_admin(Name);
+
+               return true;
+            }
+           else if(personels.length()-1){
+               return false;
+           }
+
+
+    }
 
 }
 
-void team::removeAdminTeam(QString Name){
+bool team::removeAdminTeam(QString Name){
 
-    teamLeaders.remove(Name);
+
+   if(teamLeaders.remove(Name)== "Admin removed successfully"){
+       return true;
+
+   }
+
+   else{
+
+       return false;
+   }
 
 
 }
@@ -28,87 +49,82 @@ return teamLeaders.get_name(Index);
 
 }
 
-void team::setNameProject(QString Name){
+void team::setTaskTime(QString NewTime){
 
-    teamProject.setName(Name);
+    taskTeam.set_datefinis(NewTime);
 }
 
-QString team::getNameProject(){
+void team::setTaskTitle(QString NewTitle){
 
-   return teamProject.getName();
-
+    taskTeam.set_taskwork(NewTitle);
 }
 
-void team::setOrganProject(QString Name){
-
-    teamProject.setOrgan(Name);
+void team:: setTaskArchive(){
+     taskTeam.set_archive();
 }
 
-QString team::getOrganProject(){
+bool team::getTaskArchive(){
 
-   return teamProject.getOrgan();
-
+   return taskTeam.get_archive();
 }
 
+QString team::getTaskTitle(){
 
-void team::setTaskProject(QString Time){
-
-    teamProject.setTaskTime(Time);
-
+    return taskTeam.get_task();
 }
 
-void team::setTaskTimeProject(QString TaskString){
+QString team::getTaskTime(){
 
-    teamProject.setTask(TaskString);
-
-}
-
-void team::setTaskArchiveProject(){
-
-    teamProject.setTaskArchive();
-}
-
-QString team::getTaskTitleProject(){
-
-    return teamProject.getTaskTitle();
-}
-
-QString team::getTaskTimeProject(){
-
-     return teamProject.getTaskTime();
-}
-
-bool team::getTaskArchiveProject(){
-
-    return teamProject.getTaskArchive();
+     return taskTeam.get_date_finish();
 }
 
 
 
 
+bool team::addMember(QString UserName){
+     QString address=UserName+".txt";
+      QFile file(address);
+
+       if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
+           personels.push_back(UserName);
+           return true;
+       }
+
+       else{
+
+           return false;
+       }
+
+}
+
+QString team::getMember(int Index){
+    if(Index<0||Index>personels.length()){
+        return "out of range index!!";
+    }
+
+    return personels[Index];
+
+}
+
+bool team::removeMember(QString Name){
+
+    for(int i=0;i<personels.length();i++){
+
+        if(personels[i]==Name){
+            personels.remove(i);
+            return true;
+        }
+
+        else{
+            if(i==personels.length()){
+                return false;
+            }
+        }
 
 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

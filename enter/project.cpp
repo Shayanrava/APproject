@@ -60,7 +60,22 @@ bool project::getTaskArchive()
 
 void project::newAdmin(QString NewName)
 {
-    admins_of_projects.new_admin(NewName);
+    for(int i=0;i<personels.length();i++){
+
+        if(personels[i].user_get_name()==NewName){
+
+           admins_of_projects.new_admin(NewName);
+
+           return;
+        }
+
+
+        if(i==personels.length()-1){
+
+        }
+    }
+
+
 }
 
 QString project::removeAdmin(QString Remove)
