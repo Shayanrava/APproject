@@ -70,9 +70,7 @@ void project::newAdmin(QString NewName)
         }
 
 
-        if(i==personels.length()-1){
 
-        }
     }
 
 
