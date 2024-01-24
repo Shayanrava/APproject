@@ -6,7 +6,15 @@ project::project() {}
 
 
 //admins admins_of_projects;
+void project::setStatus(QString Status)
+{
+    status=Status;
+}
 
+QString project::getStatus()
+{
+    return status;
+}
 
 void project::setName(QString Name)
 {
