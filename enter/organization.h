@@ -19,7 +19,17 @@ public:
 
     QString getAdmin(int);
 
-    bool addProject();
+    void addProject(QString,QString,QString);
+
+    bool removeProject(QString);
+
+    QString getProjectName(int);
+
+    bool setStatus(QString,QString);
+
+    QString getStatus(QString);
+
+
 };
 
 #endif // ORGANIZATION_H
