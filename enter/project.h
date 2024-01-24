@@ -14,9 +14,12 @@ class project
     task task_of_projects;
     admins admins_of_projects;
     QVector<Person>personels;
+    QString status;
 public:
     project();
-
+//تغییر وضعبت
+    void setStatus(QString);
+    QString getStatus();
 //    گرفتن و تنظیم کردن نام
     void setName(QString);
     QString getName();
