@@ -231,4 +231,22 @@ bool organization::setTaskArchive(QString Name)
         }
     }
 }
-
+//----------------------------------------------------------
+bool organization::addMember(QString Name,QString userName,QString taskWork,QString dateFinish)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].addMember(userName,taskWork,dateFinish);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}

@@ -51,6 +51,8 @@ public:
     bool getTaskArchive(QString Name);
 
     bool setTaskArchive(QString Name);
+    //----------------------------------------------------------
+
 };
 
 #endif // ORGANIZATION_H
