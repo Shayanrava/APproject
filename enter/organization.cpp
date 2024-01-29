@@ -202,3 +202,14 @@ QString organization::getProjectTimeTask(QString Name)
     }
 }
 
+
+void organization::setNameOrgan(QString Name)
+{
+    nameOrgan=Name;
+}
+
+
+QString organization::getNameOrgan()
+{
+    return nameOrgan;
+}

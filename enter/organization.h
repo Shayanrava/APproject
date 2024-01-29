@@ -5,14 +5,18 @@
 #include"team.h"
 class organization
 {
-    QString name;
+    QString nameOrgan;
     QVector<project>organProjects;
     QVector<team>organTeams;
     admins organadmins;
 
 public:
     organization();
-
+    void setNameOrgan(QString Name);
+    QString getNameOrgan();
+    //----------------------------------------------------------
+    //----------------------------------------------------------
+    //----------------------------------------------------------
     void addAdmin(QString);
 
     bool removeAdmin(QString);
