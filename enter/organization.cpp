@@ -165,6 +165,7 @@ QString organization::getAdmin(int Index)
 //    }
 //}
 
+<<<<<<< HEAD
 //QString organization::getProjectTimeTask(QString Name)
 //{
 //    for(int i=0;i<organProjects.length();i++)
@@ -182,3 +183,23 @@ QString organization::getAdmin(int Index)
 //        }
 //    }
 //}
+=======
+QString organization::getProjectTimeTask(QString Name)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return organProjects[i].getTaskTime();
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return "not found!";
+            }
+        }
+    }
+}
+//
+>>>>>>> 75cbd44215bb002586549c8e0daf5a313e8dc2a6
