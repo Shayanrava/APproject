@@ -371,12 +371,33 @@ void project::setTimeMember(QString Name,QString NewTime){
              return;
          }
 
-
-
     }
 
 
+}
+
+
+comment project::getComment(int Index){
+
+    return task_of_projects.getComment(Index);
+}
+
+bool project::removeComment(QString Name,QString Title,QString Time){
+
+     return task_of_projects.removeComment(Name,Title,Time);
+}
+bool project::removeComment(int Index){
+
+    return task_of_projects.removeComment(Index);
+}
+
+void project::addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle){
+
+
+    task_of_projects.addComment(Name,Title,Time,RepPerson,RepTitle);
 
 }
+
+
 
 

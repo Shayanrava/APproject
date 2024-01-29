@@ -52,3 +52,29 @@ void organ_task::set_workArchive()
 {
     work.set_archive();
 }
+
+
+
+void organ_task::addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle){
+
+    work.addComment(Name,Title,Time,RepPerson,RepTitle);
+
+}
+
+comment organ_task::getComment(int Index){
+
+    return work.getComment(Index);
+
+}
+
+bool organ_task::removeComment(int Index){
+
+    return work.removeComment(Index);
+
+}
+
+bool organ_task::removeComment(QString Name,QString Title,QString Time){
+
+    return work.removeComment(Name,Title ,Time);
+
+}

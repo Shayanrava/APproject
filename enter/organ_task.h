@@ -16,11 +16,20 @@ public:
     QString get_workFinish();
     bool get_workArchive();
 
+
+
     void set_projectName(QString);
     void set_organName(QString);
     void set_workFinish(QString);
     void set_workTask(QString);
     void set_workArchive();
+
+
+//    comment
+    bool removeComment(int Index);
+      bool removeComment(QString Name,QString Title,QString Time);
+       comment getComment(int Index);
+    void addComment(QString,QString,QString,QString,QString);
 };
 
 #endif // ORGAN_TASK_H

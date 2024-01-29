@@ -51,6 +51,15 @@ QString adminFind(int);
   void setTaskMember(QString,QString);
   void setTimeMember(QString,QString);
 
+//  comment
+  comment getComment(int Index);
+
+  bool removeComment(QString Name,QString Title,QString Time);
+  bool removeComment(int Index);
+
+  void addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle);
+
+
 
 };
 

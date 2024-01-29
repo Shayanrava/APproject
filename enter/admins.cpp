@@ -1,5 +1,8 @@
 #include "admins.h"
 admins::admins() {}
+
+
+
 void admins::new_admin(QString Name)
 {
     for(int i=0;i<admins_name.length();i++)

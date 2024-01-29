@@ -109,76 +109,76 @@ QString organization::getAdmin(int Index)
 }
 
 
-bool organization::setProjectTask(QString Name,QString NewTask)
-{
-    for(int i=0;i<organProjects.length();i++)
-    {
-        if(organProjects[i].getName()==Name)
-        {
-            organProjects[i].setTask(NewTask);
-            return true;
-        }
-        else
-        {
-            if(i==organProjects.length()-1)
-            {
-                return false;
-            }
-        }
-    }
-}
+//bool organization::setProjectTask(QString Name,QString NewTask)
+//{
+//    for(int i=0;i<organProjects.length();i++)
+//    {
+//        if(organProjects[i].getName()==Name)
+//        {
+//            organProjects[i].setTask(NewTask);
+//            return true;
+//        }
+//        else
+//        {
+//            if(i==organProjects.length()-1)
+//            {
+//                return false;
+//            }
+//        }
+//    }
+//}
 
-QString organization::getProjectTask(QString Name)
-{
-    for(int i=0;i<organProjects.length();i++)
-    {
-        if(organProjects[i].getName()==Name)
-        {
-            return organProjects[i].getTaskTitle();
-        }
-        else
-        {
-            if(i==organProjects.length()-1)
-            {
-                return "not found!";
-            }
-        }
-    }
-}
+//QString organization::getProjectTask(QString Name)
+//{
+//    for(int i=0;i<organProjects.length();i++)
+//    {
+//        if(organProjects[i].getName()==Name)
+//        {
+//            return organProjects[i].getTaskTitle();
+//        }
+//        else
+//        {
+//            if(i==organProjects.length()-1)
+//            {
+//                return "not found!";
+//            }
+//        }
+//    }
+//}
 
-bool organization::setProjectTimeTask(QString Name,QString NewTime)
-{
-    for(int i=0;i<organProjects.length();i++)
-    {
-        if(organProjects[i].getName()==Name)
-        {
-            organProjects[i].setTaskTime(NewTime);
-            return true;
-        }
-        else
-        {
-            if(i==organProjects.length()-1)
-            {
-                return false;
-            }
-        }
-    }
-}
+//bool organization::setProjectTimeTask(QString Name,QString NewTime)
+//{
+//    for(int i=0;i<organProjects.length();i++)
+//    {
+//        if(organProjects[i].getName()==Name)
+//        {
+//            organProjects[i].setTaskTime(NewTime);
+//            return true;
+//        }
+//        else
+//        {
+//            if(i==organProjects.length()-1)
+//            {
+//                return false;
+//            }
+//        }
+//    }
+//}
 
-QString organization::getProjectTimeTask(QString Name)
-{
-    for(int i=0;i<organProjects.length();i++)
-    {
-        if(organProjects[i].getName()==Name)
-        {
-            return organProjects[i].getTaskTime();
-        }
-        else
-        {
-            if(i==organProjects.length()-1)
-            {
-                return "not found!";
-            }
-        }
-    }
-}
+//QString organization::getProjectTimeTask(QString Name)
+//{
+//    for(int i=0;i<organProjects.length();i++)
+//    {
+//        if(organProjects[i].getName()==Name)
+//        {
+//            return organProjects[i].getTaskTime();
+//        }
+//        else
+//        {
+//            if(i==organProjects.length()-1)
+//            {
+//                return "not found!";
+//            }
+//        }
+//    }
+//}

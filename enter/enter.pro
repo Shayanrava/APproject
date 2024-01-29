@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     add_people.cpp \
     admins.cpp \
+    comment.cpp \
     entrance_organ.cpp \
     filtering_organizations.cpp \
     forget.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
 HEADERS += \
     add_people.h \
     admins.h \
+    comment.h \
     enter.h \
     entrance_organ.h \
     filtering_organizations.h \

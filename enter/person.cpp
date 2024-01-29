@@ -127,3 +127,9 @@ void Person::setTask(int i,QString NewTask){
 
      tasks[i].set_workTask(NewTask);
 }
+
+
+
+
+
+
