@@ -5,14 +5,62 @@ organization::organization()
 {
 
 }
+//----------------------------------------------------------
+//----------------------------------------------------------
+//----------------------------------------------------------
+void organization::setNameOrgan(QString Name)
+{
+    nameOrgan=Name;
+}
 
+
+QString organization::getNameOrgan()
+{
+    return nameOrgan;
+}
+
+//----------------------------------------------------------
+//----------------------------------------------------------
+//----------------------------------------------------------
+void organization::addAdmin(QString Admin)
+{
+    organadmins.new_admin(Admin);
+}
+
+bool organization::removeAdmin(QString Admin)
+{
+    if(organadmins.remove(Admin)=="Admin removed successfully")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+QString organization::getAdmin(int Index)
+{
+    if(organadmins.get_name(Index)!="out of range index!")
+    {
+        return organadmins.get_name(Index);
+    }
+    else
+    {
+        return "out of range index!";
+    }
+}
+//----------------------------------------------------------
+//----------------------------------------------------------
+//----------------------------------------------------------
 void organization::addProject(QString ProjectName,QString TitleTask,QString TimeTask)
 {
     project tmp;
     tmp.setName(ProjectName);
     tmp.setTask(TitleTask);
     tmp.setTaskTime(TimeTask);
-    tmp.setOrgan(name);
+    tmp.setOrgan(nameOrgan);
+    tmp.setStatus("");
     organProjects.push_back(tmp);
 }
 
@@ -23,7 +71,7 @@ bool organization::removeProject(QString Name)
         if(organProjects[i].getName()==Name)
         {
             organProjects.remove(i);
-            return 1;
+            return true;
         }
         else
         {
@@ -39,7 +87,7 @@ QString organization::getProjectName(int Index)
 {
     return organProjects[Index].getName();
 }
-
+//----------------------------------------------------------
 bool organization::setStatus(QString Name,QString NewStatus)
 {
     for(int i=0;i<organProjects.length();i++)
@@ -76,113 +124,64 @@ QString organization::getStatus(QString Name)
         }
     }
 }
+//----------------------------------------------------------
 
-
-
-void organization::addAdmin(QString Admin)
+bool organization::setProjectTask(QString Name,QString NewTask)
 {
-    organadmins.new_admin(Admin);
+   for(int i=0;i<organProjects.length();i++)
+   {
+       if(organProjects[i].getName()==Name)
+       {
+           organProjects[i].setTask(NewTask);
+           return true;
+       }
+       else
+       {
+           if(i==organProjects.length()-1)
+           {
+               return false;
+           }
+       }
+   }
 }
 
-bool organization::removeAdmin(QString Admin)
+QString organization::getProjectTask(QString Name)
 {
-    if(organadmins.remove(Admin)=="Admin removed successfully")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+   for(int i=0;i<organProjects.length();i++)
+   {
+       if(organProjects[i].getName()==Name)
+       {
+           return organProjects[i].getTaskTitle();
+       }
+       else
+       {
+           if(i==organProjects.length()-1)
+           {
+               return "not found!";
+           }
+       }
+   }
 }
 
-QString organization::getAdmin(int Index)
+bool organization::setProjectTimeTask(QString Name,QString NewTime)
 {
-    if(organadmins.get_name(Index)!="out of range index!")
-    {
-        return organadmins.get_name(Index);
-    }
-    else
-    {
-        return "out of range index!";
-    }
+   for(int i=0;i<organProjects.length();i++)
+   {
+       if(organProjects[i].getName()==Name)
+       {
+           organProjects[i].setTaskTime(NewTime);
+           return true;
+       }
+       else
+       {
+           if(i==organProjects.length()-1)
+           {
+               return false;
+           }
+       }
+   }
 }
 
-
-//bool organization::setProjectTask(QString Name,QString NewTask)
-//{
-//    for(int i=0;i<organProjects.length();i++)
-//    {
-//        if(organProjects[i].getName()==Name)
-//        {
-//            organProjects[i].setTask(NewTask);
-//            return true;
-//        }
-//        else
-//        {
-//            if(i==organProjects.length()-1)
-//            {
-//                return false;
-//            }
-//        }
-//    }
-//}
-
-//QString organization::getProjectTask(QString Name)
-//{
-//    for(int i=0;i<organProjects.length();i++)
-//    {
-//        if(organProjects[i].getName()==Name)
-//        {
-//            return organProjects[i].getTaskTitle();
-//        }
-//        else
-//        {
-//            if(i==organProjects.length()-1)
-//            {
-//                return "not found!";
-//            }
-//        }
-//    }
-//}
-
-//bool organization::setProjectTimeTask(QString Name,QString NewTime)
-//{
-//    for(int i=0;i<organProjects.length();i++)
-//    {
-//        if(organProjects[i].getName()==Name)
-//        {
-//            organProjects[i].setTaskTime(NewTime);
-//            return true;
-//        }
-//        else
-//        {
-//            if(i==organProjects.length()-1)
-//            {
-//                return false;
-//            }
-//        }
-//    }
-//}
-
-
-//QString organization::getProjectTimeTask(QString Name)
-//{
-//    for(int i=0;i<organProjects.length();i++)
-//    {
-//        if(organProjects[i].getName()==Name)
-//        {
-//            return organProjects[i].getTaskTime();
-//        }
-//        else
-//        {
-//            if(i==organProjects.length()-1)
-//            {
-//                return "not found!";
-//            }
-//        }
-//    }
-//}
 
 QString organization::getProjectTimeTask(QString Name)
 {
@@ -202,14 +201,34 @@ QString organization::getProjectTimeTask(QString Name)
     }
 }
 
-
-void organization::setNameOrgan(QString Name)
+bool organization::getTaskArchive(QString Name)
 {
-    nameOrgan=Name;
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return organProjects[i].getTaskArchive();
+        }
+    }
 }
 
 
-QString organization::getNameOrgan()
+bool organization::setTaskArchive(QString Name)
 {
-    return nameOrgan;
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].setTaskArchive();
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
 }
+
