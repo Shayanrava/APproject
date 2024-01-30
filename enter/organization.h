@@ -82,7 +82,13 @@ public:
 
     QString adminsFindTeam(QString Name,int Index);
 
+    bool setTaskTimeTeam(QString Name,QString Time);
 
+    bool setTaskTeam(QString Title,QString Name);
+
+    QString getTitleTeam(QString Name);
+
+    QString getTimeTeam(QString Name);
 };
 
 #endif // ORGANIZATION_H

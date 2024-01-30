@@ -479,3 +479,63 @@ QString organization::adminsFindTeam(QString Name,int Index)
         }
     }
 }
+
+bool organization::setTaskTimeTeam(QString Name,QString Time)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            organTeams[i].setTaskTime(Time);
+            return true;
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+bool organization::setTaskTeam(QString Title,QString Name)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            organTeams[i].setTaskTitle(Title);
+            return true;
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+QString organization::getTitleTeam(QString Name)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].getTaskTitle();
+        }
+    }
+}
+
+QString organization::getTimeTeam(QString Name)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].getTaskTime();
+        }
+    }
+}

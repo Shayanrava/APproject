@@ -31,9 +31,9 @@ public:
 
     void setTaskTitle(QString);
 
-    void setTaskArchive();
+    // void setTaskArchive();
 
-    bool getTaskArchive();
+    // bool getTaskArchive();
 
     QString getTaskTitle();
 

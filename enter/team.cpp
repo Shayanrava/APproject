@@ -59,14 +59,14 @@ void team::setTaskTitle(QString NewTitle){
     taskTeam.set_taskwork(NewTitle);
 }
 
-void team:: setTaskArchive(){
-     taskTeam.set_archive();
-}
+// void team:: setTaskArchive(){
+//      taskTeam.set_archive();
+// }
 
-bool team::getTaskArchive(){
+// bool team::getTaskArchive(){
 
-   return taskTeam.get_archive();
-}
+//    return taskTeam.get_archive();
+// }
 
 QString team::getTaskTitle(){
 
