@@ -270,3 +270,51 @@ bool organization::removeMember(QString Name,QString NameMember)
     }
 }
 
+QString organization::memberFind(QString Name,int Index)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return organProjects[i].memberFind(Index);
+        }
+    }
+}
+
+bool organization::setTaskMember(QString Name,QString NamePerson,QString NameTask)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].setTaskMember(NamePerson,NameTask);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+bool organization::setTimeMember(QString Name,QString NamePerson,QString NewTime)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].setTimeMember(NamePerson,NewTime);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
