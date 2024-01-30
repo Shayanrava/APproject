@@ -27,7 +27,7 @@ void Enter::gotosignin(){
 
 void Enter::gotosignup(){
 
-  this->close();
+
 
     sup->show();
 

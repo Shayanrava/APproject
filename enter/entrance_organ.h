@@ -2,6 +2,8 @@
 #define ENTRANCE_ORGAN_H
 
 #include <QMainWindow>
+#include<QFile>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,6 +19,8 @@ public:
     entrance_organ(QWidget *parent = nullptr);
     ~entrance_organ();
 
+//    QString n;
+
 private slots:
     void on_pbn_making_clicked();
 
@@ -27,6 +31,7 @@ private slots:
     void on_pbn_login_clicked();
 
 private:
+
     Ui::entrance_organ *ui;
 };
 #endif // ENTRANCE_ORGAN_H

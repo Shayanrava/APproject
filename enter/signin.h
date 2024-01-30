@@ -25,6 +25,8 @@ public slots:
     void closesignin();
 
 private:
+
+    QString nameEnter;
     QFile* file;
     forget* forgetpassword;
 

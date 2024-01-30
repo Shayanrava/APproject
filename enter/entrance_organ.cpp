@@ -9,6 +9,17 @@ entrance_organ::entrance_organ(QWidget *parent)
     , ui(new Ui::entrance_organ)
 {
     ui->setupUi(this);
+
+ QFile f2("enter.txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
+ QString useread( f2.readAll());
+ f2.close();
+
+ QStringList n=useread.split(" ");
+
+    ui->lblnameEnter->setText(n[0]);
+
+
 }
 
 entrance_organ::~entrance_organ()

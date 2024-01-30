@@ -68,8 +68,23 @@ if(ui->leduser->text()==listuser[i]&&ui->ledpas->text()==listuser[i+1]){
     ui->leduser->setStyleSheet("background-color:green;");
      ui->ledpas->setStyleSheet("background-color:green;");
      ui->ledpas->setText("Login successful");
-     this->close();
-     entertomenue->show();
+
+     nameEnter=ui->leduser->text();
+     QFile f2("enter.txt");
+
+     f2.open(QIODevice::WriteOnly | QIODevice::Text);
+
+      QTextStream Qout(&f2);
+
+      Qout<<nameEnter;
+      f2.close();
+
+     QTimer::singleShot(2000,[=](){
+
+         entertomenue->show(); this->close();
+     });
+
+
      break;
 }
 else{
@@ -86,7 +101,7 @@ else{
 }
 
 void signin::closesignin(){
-    this->close();
+
 
     forgetpassword->show();
 
