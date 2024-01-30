@@ -67,6 +67,34 @@ public:
     bool removeComment(QString Name,QString Sender,QString Title,QString Time);
 
     bool removeComment(QString Name,int Index);
+    //----------------------------------------------------------
+    bool newAdminProject(QString Name,QString NameAdmin);
+
+    bool removeAdminProject(QString Name,QString NameAdmin);
+
+    QString adminFindProject(QString Name,int Index);
+    //----------------------------------------------------------
+    //----------------------------------------------------------
+    //----------------------------------------------------------
+    bool addAdminTeam(QString Name,QString NameAdmin);
+
+    bool removeAdminTeam(QString Name,QString NameAdmin);
+
+    QString adminsFindTeam(QString Name,int Index);
+
+    bool setTaskTimeTeam(QString Name,QString Time);
+
+    bool setTaskTeam(QString Title,QString Name);
+
+    QString getTitleTeam(QString Name);
+
+    QString getTimeTeam(QString Name);
+
+    bool addMemberTeam(QString Name,QString UserName);
+
+    QString getMemberTeam(QString Name , int Index);
+
+    bool removeMemberTeam(QString Name,QString UserName);
 };
 
 #endif // ORGANIZATION_H

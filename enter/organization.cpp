@@ -384,3 +384,207 @@ bool organization::addComment(QString Name,QString Sender,QString Title,QString 
         }
     }
 }
+
+bool organization::newAdminProject(QString Name,QString NameAdmin)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].newAdmin(NameAdmin);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+bool organization::removeAdminProject(QString Name,QString NameAdmin)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name && organProjects[i].removeAdmin(NameAdmin)=="Admin removed successfully")
+        {
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+QString organization::adminFindProject(QString Name,int Index)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return organProjects[i].adminFind(Index);
+        }
+    }
+}
+
+bool organization::addAdminTeam(QString Name,QString NameAdmin)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].addAdminTeam(NameAdmin);
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+bool organization::removeAdminTeam(QString Name,QString NameAdmin)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].removeAdminTeam(NameAdmin);
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+QString organization::adminsFindTeam(QString Name,int Index)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].adminsTeam(Index);
+        }
+    }
+}
+
+bool organization::setTaskTimeTeam(QString Name,QString Time)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            organTeams[i].setTaskTime(Time);
+            return true;
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+bool organization::setTaskTeam(QString Title,QString Name)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            organTeams[i].setTaskTitle(Title);
+            return true;
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+QString organization::getTitleTeam(QString Name)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].getTaskTitle();
+        }
+    }
+}
+
+QString organization::getTimeTeam(QString Name)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].getTaskTime();
+        }
+    }
+}
+
+bool organization::addMemberTeam(QString Name,QString UserName)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].addMember(UserName);
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+
+QString organization::getMemberTeam(QString Name , int Index)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].getMember(Index);
+        }
+    }
+}
+
+
+bool organization::removeMemberTeam(QString Name,QString UserName)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].removeMember(UserName);
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}

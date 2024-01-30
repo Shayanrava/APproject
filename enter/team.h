@@ -14,7 +14,7 @@ class team
 
     QVector<QString>personels;
 
-
+    QString nameTeam;
 
 
     
@@ -31,9 +31,9 @@ public:
 
     void setTaskTitle(QString);
 
-    void setTaskArchive();
+    // void setTaskArchive();
 
-    bool getTaskArchive();
+    // bool getTaskArchive();
 
     QString getTaskTitle();
 
@@ -49,15 +49,17 @@ public:
 //   ---------------------------------------------------
 
 
-    comment getComment(int Index);
+    // comment getComment(int Index);
 
-    bool removeComment(QString Name,QString Title,QString Time);
+    // bool removeComment(QString Name,QString Title,QString Time);
 
-    bool removeComment(int Index);
+    // bool removeComment(int Index);
 
-    void addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle);
+    // void addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle);
 
-
+//-------------------------------------------------------
+    void setName(QString Name);
+    QString getName();
 };
 
 #endif // TEAM_H

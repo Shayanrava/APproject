@@ -59,14 +59,14 @@ void team::setTaskTitle(QString NewTitle){
     taskTeam.set_taskwork(NewTitle);
 }
 
-void team:: setTaskArchive(){
-     taskTeam.set_archive();
-}
+// void team:: setTaskArchive(){
+//      taskTeam.set_archive();
+// }
 
-bool team::getTaskArchive(){
+// bool team::getTaskArchive(){
 
-   return taskTeam.get_archive();
-}
+//    return taskTeam.get_archive();
+// }
 
 QString team::getTaskTitle(){
 
@@ -127,27 +127,35 @@ bool team::removeMember(QString Name){
 }
 
 
-comment team::getComment(int Index){
+// comment team::getComment(int Index){
 
-    return taskTeam.getComment(Index);
+//     return taskTeam.getComment(Index);
+// }
+
+// bool team::removeComment(QString Name,QString Title,QString Time){
+
+//      return taskTeam.removeComment(Name,Title,Time);
+// }
+// bool team::removeComment(int Index){
+
+//     return taskTeam.removeComment(Index);
+// }
+
+// void team::addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle){
+
+
+//     taskTeam.addComment(Name,Title,Time,RepPerson,RepTitle);
+
+// }
+
+void team::setName(QString Name)
+{
+    nameTeam=Name;
 }
 
-bool team::removeComment(QString Name,QString Title,QString Time){
-
-     return taskTeam.removeComment(Name,Title,Time);
+QString team::getName()
+{
+    return nameTeam;
 }
-bool team::removeComment(int Index){
-
-    return taskTeam.removeComment(Index);
-}
-
-void team::addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle){
-
-
-    taskTeam.addComment(Name,Title,Time,RepPerson,RepTitle);
-
-}
-
-
 
 
