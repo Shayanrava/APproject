@@ -127,26 +127,26 @@ bool team::removeMember(QString Name){
 }
 
 
-comment team::getComment(int Index){
+// comment team::getComment(int Index){
 
-    return taskTeam.getComment(Index);
-}
+//     return taskTeam.getComment(Index);
+// }
 
-bool team::removeComment(QString Name,QString Title,QString Time){
+// bool team::removeComment(QString Name,QString Title,QString Time){
 
-     return taskTeam.removeComment(Name,Title,Time);
-}
-bool team::removeComment(int Index){
+//      return taskTeam.removeComment(Name,Title,Time);
+// }
+// bool team::removeComment(int Index){
 
-    return taskTeam.removeComment(Index);
-}
+//     return taskTeam.removeComment(Index);
+// }
 
-void team::addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle){
+// void team::addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle){
 
 
-    taskTeam.addComment(Name,Title,Time,RepPerson,RepTitle);
+//     taskTeam.addComment(Name,Title,Time,RepPerson,RepTitle);
 
-}
+// }
 
 void team::setName(QString Name)
 {

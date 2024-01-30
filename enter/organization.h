@@ -76,6 +76,12 @@ public:
     //----------------------------------------------------------
     //----------------------------------------------------------
     //----------------------------------------------------------
+    bool addAdminTeam(QString Name,QString NameAdmin);
+
+    bool removeAdminTeam(QString Name,QString NameAdmin);
+
+    QString adminsFindTeam(QString Name,int Index);
+
 
 };
 
