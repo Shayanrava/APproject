@@ -251,4 +251,22 @@ bool organization::addMember(QString Name,QString userName,QString taskWork,QStr
     }
 }
 
+bool organization::removeMember(QString Name,QString NameMember)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].removeMember(NameMember);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
 

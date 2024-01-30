@@ -54,6 +54,8 @@ public:
     //----------------------------------------------------------
     //----------------------------------------------------------
     bool addMember(QString Name,QString userName,QString taskWork,QString dateFinish);
+    bool removeMember(QString Name,QString NameMember);
+    //------------------------------------------------------------
 
 };
 
