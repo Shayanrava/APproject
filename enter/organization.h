@@ -52,9 +52,21 @@ public:
 
     bool setTaskArchive(QString Name);
     //----------------------------------------------------------
-    //----------------------------------------------------------
     bool addMember(QString Name,QString userName,QString taskWork,QString dateFinish);
 
+    bool removeMember(QString Name,QString NameMember);
+
+    QString memberFind(QString Name,int Index);
+
+    bool setTaskMember(QString Name,QString NamePerson,QString NameTask);
+
+    bool setTimeMember(QString Name,QString NamePerson,QString NewTime);
+    //------------------------------------------------------------
+    comment getComment(QString Name,int Index);
+
+    bool removeComment(QString Name,QString Sender,QString Title,QString Time);
+
+    bool removeComment(QString Name,int Index);
 };
 
 #endif // ORGANIZATION_H

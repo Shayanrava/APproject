@@ -251,4 +251,136 @@ bool organization::addMember(QString Name,QString userName,QString taskWork,QStr
     }
 }
 
+bool organization::removeMember(QString Name,QString NameMember)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].removeMember(NameMember);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
 
+QString organization::memberFind(QString Name,int Index)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return organProjects[i].memberFind(Index);
+        }
+    }
+}
+
+bool organization::setTaskMember(QString Name,QString NamePerson,QString NameTask)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].setTaskMember(NamePerson,NameTask);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+bool organization::setTimeMember(QString Name,QString NamePerson,QString NewTime)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].setTimeMember(NamePerson,NewTime);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+comment organization::getComment(QString Name,int Index)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return organProjects[i].getComment(Index);
+        }
+    }
+}
+
+bool organization::removeComment(QString Name,QString Sender,QString Title,QString Time)
+{
+     for(int i=0;i<organProjects.length();i++)
+     {
+         if(organProjects[i].getName()==Name)
+         {
+            return  organProjects[i].removeComment(Sender,Title,Time);
+         }
+         else
+         {
+             if(i==organProjects.length()-1)
+             {
+                 return false;
+             }
+         }
+     }
+}
+
+bool organization::removeComment(QString Name,int Index)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return  organProjects[i].removeComment(Index);
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+bool organization::addComment(QString Name,QString Sender,QString Title,QString Time,QString RepPerson,QString RepTitle)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].addComment(Sender,Title,Time,RepPerson,RepTitle);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
