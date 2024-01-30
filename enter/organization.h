@@ -63,6 +63,10 @@ public:
     bool setTimeMember(QString Name,QString NamePerson,QString NewTime);
     //------------------------------------------------------------
     comment getComment(QString Name,int Index);
+
+    bool removeComment(QString Name,QString Sender,QString Title,QString Time);
+
+    bool removeComment(QString Name,int Index);
 };
 
 #endif // ORGANIZATION_H

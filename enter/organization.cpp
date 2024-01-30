@@ -329,3 +329,58 @@ comment organization::getComment(QString Name,int Index)
         }
     }
 }
+
+bool organization::removeComment(QString Name,QString Sender,QString Title,QString Time)
+{
+     for(int i=0;i<organProjects.length();i++)
+     {
+         if(organProjects[i].getName()==Name)
+         {
+            return  organProjects[i].removeComment(Sender,Title,Time);
+         }
+         else
+         {
+             if(i==organProjects.length()-1)
+             {
+                 return false;
+             }
+         }
+     }
+}
+
+bool organization::removeComment(QString Name,int Index)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return  organProjects[i].removeComment(Index);
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+bool organization::addComment(QString Name,QString Sender,QString Title,QString Time,QString RepPerson,QString RepTitle)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            organProjects[i].addComment(Sender,Title,Time,RepPerson,RepTitle);
+            return true;
+        }
+        else
+        {
+            if(i==organProjects.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
