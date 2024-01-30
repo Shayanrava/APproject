@@ -539,3 +539,52 @@ QString organization::getTimeTeam(QString Name)
         }
     }
 }
+
+bool organization::addMemberTeam(QString Name,QString UserName)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].addMember(UserName);
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}
+
+
+QString organization::getMemberTeam(QString Name , int Index)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].getMember(Index);
+        }
+    }
+}
+
+
+bool organization::removeMemberTeam(QString Name,QString UserName)
+{
+    for(int i=0;i<organTeams.length();i++)
+    {
+        if(organTeams[i].getName()==Name)
+        {
+            return  organTeams[i].removeMember(UserName);
+        }
+        else
+        {
+            if(i==organTeams.length()-1)
+            {
+                return false;
+            }
+        }
+    }
+}

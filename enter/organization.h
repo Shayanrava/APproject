@@ -89,6 +89,12 @@ public:
     QString getTitleTeam(QString Name);
 
     QString getTimeTeam(QString Name);
+
+    bool addMemberTeam(QString Name,QString UserName);
+
+    QString getMemberTeam(QString Name , int Index);
+
+    bool removeMemberTeam(QString Name,QString UserName);
 };
 
 #endif // ORGANIZATION_H
