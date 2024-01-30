@@ -17,7 +17,7 @@ entrance_organ::entrance_organ(QWidget *parent)
 
  QStringList n=useread.split(" ");
 
-    ui->lblnameEnter->setText(n[0]);
+    ui->label->setText(n[0]);
 
 
 }
