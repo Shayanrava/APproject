@@ -67,6 +67,16 @@ public:
     bool removeComment(QString Name,QString Sender,QString Title,QString Time);
 
     bool removeComment(QString Name,int Index);
+    //----------------------------------------------------------
+    bool newAdminProject(QString Name,QString NameAdmin);
+
+    bool removeAdminProject(QString Name,QString NameAdmin);
+
+    QString adminFindProject(QString Name,int Index);
+    //----------------------------------------------------------
+    //----------------------------------------------------------
+    //----------------------------------------------------------
+
 };
 
 #endif // ORGANIZATION_H

@@ -148,6 +148,14 @@ void team::addComment(QString Name,QString Title,QString Time,QString RepPerson,
 
 }
 
+void team::setName(QString Name)
+{
+    nameTeam=Name;
+}
 
+QString team::getName()
+{
+    return nameTeam;
+}
 
 

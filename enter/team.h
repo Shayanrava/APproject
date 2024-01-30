@@ -14,7 +14,7 @@ class team
 
     QVector<QString>personels;
 
-
+    QString nameTeam;
 
 
     
@@ -57,7 +57,9 @@ public:
 
     void addComment(QString Name,QString Title,QString Time,QString RepPerson,QString RepTitle);
 
-
+//-------------------------------------------------------
+    void setName(QString Name);
+    QString getName();
 };
 
 #endif // TEAM_H
