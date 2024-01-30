@@ -52,6 +52,8 @@ public:
 
     bool setTaskArchive(QString Name);
     //----------------------------------------------------------
+    //----------------------------------------------------------
+    bool addMember(QString Name,QString userName,QString taskWork,QString dateFinish);
 
 };
 
