@@ -62,7 +62,7 @@ public:
 
     bool setTimeMember(QString Name,QString NamePerson,QString NewTime);
     //------------------------------------------------------------
-
+    comment getComment(QString Name,int Index);
 };
 
 #endif // ORGANIZATION_H

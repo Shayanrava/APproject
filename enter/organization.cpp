@@ -318,3 +318,14 @@ bool organization::setTimeMember(QString Name,QString NamePerson,QString NewTime
         }
     }
 }
+
+comment organization::getComment(QString Name,int Index)
+{
+    for(int i=0;i<organProjects.length();i++)
+    {
+        if(organProjects[i].getName()==Name)
+        {
+            return organProjects[i].getComment(Index);
+        }
+    }
+}
