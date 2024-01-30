@@ -366,22 +366,16 @@ bool organization::removeComment(QString Name,int Index)
     }
 }
 
-bool organization::addComment(QString Name,QString Sender,QString Title,QString Time,QString RepPerson,QString RepTitle)
+void organization::addComment(QString Name,QString Sender,QString Title,QString Time,QString RepPerson,QString RepTitle)
 {
     for(int i=0;i<organProjects.length();i++)
     {
         if(organProjects[i].getName()==Name)
         {
             organProjects[i].addComment(Sender,Title,Time,RepPerson,RepTitle);
-            return true;
+
         }
-        else
-        {
-            if(i==organProjects.length()-1)
-            {
-                return false;
-            }
-        }
+
     }
 }
 
@@ -588,3 +582,8 @@ bool organization::removeMemberTeam(QString Name,QString UserName)
         }
     }
 }
+
+//----------------------------------------------------------
+//----------------------------------------------------------
+//----------------------------------------------------------
+

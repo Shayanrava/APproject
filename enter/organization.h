@@ -11,6 +11,8 @@ class organization
     admins organadmins;
 
 public:
+
+
     organization();
     void setNameOrgan(QString Name);
     QString getNameOrgan();
@@ -67,12 +69,15 @@ public:
     bool removeComment(QString Name,QString Sender,QString Title,QString Time);
 
     bool removeComment(QString Name,int Index);
+
+       void addComment(QString Name,QString Sender,QString Title,QString Time,QString RepPerson,QString RepTitle);
     //----------------------------------------------------------
     bool newAdminProject(QString Name,QString NameAdmin);
 
     bool removeAdminProject(QString Name,QString NameAdmin);
 
     QString adminFindProject(QString Name,int Index);
+
     //----------------------------------------------------------
     //----------------------------------------------------------
     //----------------------------------------------------------
@@ -95,6 +100,12 @@ public:
     QString getMemberTeam(QString Name , int Index);
 
     bool removeMemberTeam(QString Name,QString UserName);
+    //----------------------------------------------------------
+    //----------------------------------------------------------
+    //----------------------------------------------------------
+
+
+
 };
 
 #endif // ORGANIZATION_H
