@@ -19,3 +19,9 @@ void project_before::on_change_task_person_pbn_clicked()
     cmt->show();
 }
 
+
+void project_before::on_view_task_person_pbn_clicked()
+{
+
+}
+

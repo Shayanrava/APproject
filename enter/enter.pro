@@ -38,7 +38,8 @@ SOURCES += \
     signup.cpp \
     task.cpp \
     team.cpp \
-    team_before.cpp
+    team_before.cpp \
+    view_member_task_in_project.cpp
 
 HEADERS += \
     add_people.h \
@@ -69,7 +70,8 @@ HEADERS += \
     signup.h \
     task.h \
     team.h \
-    team_before.h
+    team_before.h \
+    view_member_task_in_project.h
 
 FORMS += \
     add_people.ui \
@@ -92,7 +94,8 @@ FORMS += \
     removing_organization.ui \
     signin.ui \
     signup.ui \
-    team_before.ui
+    team_before.ui \
+    view_member_task_in_project.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
