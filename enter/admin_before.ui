@@ -110,7 +110,7 @@ border-radius:10px;
 }</string>
    </property>
    <property name="text">
-    <string>View admin</string>
+    <string>View admins</string>
    </property>
   </widget>
  </widget>
