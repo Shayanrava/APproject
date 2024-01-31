@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     add_people.cpp \
     add_project_before.cpp \
+    add_team_before.cpp \
     admins.cpp \
     comment.cpp \
     delete_project_before.cpp \
@@ -35,6 +36,7 @@ SOURCES += \
 HEADERS += \
     add_people.h \
     add_project_before.h \
+    add_team_before.h \
     admins.h \
     comment.h \
     delete_project_before.h \
@@ -58,6 +60,7 @@ HEADERS += \
 FORMS += \
     add_people.ui \
     add_project_before.ui \
+    add_team_before.ui \
     delete_project_before.ui \
     enter.ui \
     entrance_organ.ui \
