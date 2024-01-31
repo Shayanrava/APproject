@@ -29,6 +29,7 @@ SOURCES += \
     organization.cpp \
     person.cpp \
     project.cpp \
+    project_before.cpp \
     removing_organization.cpp \
     signin.cpp \
     signup.cpp \
@@ -55,6 +56,7 @@ HEADERS += \
     organization.h \
     person.h \
     project.h \
+    project_before.h \
     removing_organization.h \
     signin.h \
     signup.h \
@@ -75,6 +77,7 @@ FORMS += \
     key_pass_organ.ui \
     making_decision_for_organ.ui \
     making_organization.ui \
+    project_before.ui \
     removing_organization.ui \
     signin.ui \
     signup.ui
