@@ -15,11 +15,14 @@ public:
     explicit making_decision_for_organ(QWidget *parent = nullptr);
     ~making_decision_for_organ();
 
+    void setUserName(QString Name);
+
 private slots:
     void on_pbn_pepoleTooRGAN_clicked();
 
 private:
     Ui::making_decision_for_organ *ui;
+    QString UserName;
 };
 
 #endif // MAKING_DECISION_FOR_ORGAN_H
