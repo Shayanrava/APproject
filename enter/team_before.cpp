@@ -19,3 +19,9 @@ void team_before::on_change_member_task_pbn_clicked()
     cmtt->show();
 }
 
+
+void team_before::on_view_member_task_pbn_clicked()
+{
+
+}
+
