@@ -67,3 +67,9 @@ void making_decision_for_organ::on_project_clicked()
     kpb->show();
 }
 
+
+void making_decision_for_organ::on_team_clicked()
+{
+
+}
+

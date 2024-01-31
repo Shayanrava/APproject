@@ -22,6 +22,7 @@ SOURCES += \
     forget.cpp \
     key_pass_organ.cpp \
     key_project_before.cpp \
+    key_team_before.cpp \
     main.cpp \
     enter.cpp \
     making_decision_for_organ.cpp \
@@ -52,6 +53,7 @@ HEADERS += \
     forget.h \
     key_pass_organ.h \
     key_project_before.h \
+    key_team_before.h \
     making_decision_for_organ.h \
     making_organization.h \
     organ_task.h \
@@ -78,6 +80,7 @@ FORMS += \
     forget.ui \
     key_pass_organ.ui \
     key_project_before.ui \
+    key_team_before.ui \
     making_decision_for_organ.ui \
     making_organization.ui \
     project_before.ui \
