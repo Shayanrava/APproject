@@ -18,7 +18,6 @@ public:
     void setUserName(QString Name);
 
 private slots:
-    void on_pbn_pepoleTooRGAN_clicked();
 
 private:
     Ui::making_decision_for_organ *ui;

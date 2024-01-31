@@ -13,13 +13,6 @@ making_decision_for_organ::~making_decision_for_organ()
     delete ui;
 }
 
-void making_decision_for_organ::on_pbn_pepoleTooRGAN_clicked()
-{
-    add_people *ap=new add_people();
-    ap->show();
-    this->close();
-}
-
 void making_decision_for_organ::setUserName(QString Name){
 
     UserName=Name;
