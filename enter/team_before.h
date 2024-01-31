@@ -15,6 +15,9 @@ public:
     explicit team_before(QWidget *parent = nullptr);
     ~team_before();
 
+private slots:
+    void on_change_member_task_pbn_clicked();
+
 private:
     Ui::team_before *ui;
 };
