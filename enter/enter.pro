@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     add_people.cpp \
+    add_project_before.cpp \
     admins.cpp \
     comment.cpp \
     entrance_organ.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
 
 HEADERS += \
     add_people.h \
+    add_project_before.h \
     admins.h \
     comment.h \
     enter.h \
@@ -53,6 +55,7 @@ HEADERS += \
 
 FORMS += \
     add_people.ui \
+    add_project_before.ui \
     enter.ui \
     entrance_organ.ui \
     filtering_organizations.ui \
