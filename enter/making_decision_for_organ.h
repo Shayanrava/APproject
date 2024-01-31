@@ -31,6 +31,8 @@ private slots:
 
     void on_project_clicked();
 
+    void on_team_clicked();
+
 private:
     Ui::making_decision_for_organ *ui;
     QString UserName;

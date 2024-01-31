@@ -7,6 +7,7 @@
 #include"admin_before.h"
 #include"project_before.h"
 #include"key_project_before.h"
+#include"key_team_before.h"
 #include "add_people.h"
 making_decision_for_organ::making_decision_for_organ(QWidget *parent)
     : QWidget(parent)
@@ -70,6 +71,7 @@ void making_decision_for_organ::on_project_clicked()
 
 void making_decision_for_organ::on_team_clicked()
 {
-
+    key_team_before *ktb=new key_team_before();
+    ktb->show();
 }
 

@@ -12,3 +12,9 @@ key_team_before::~key_team_before()
 {
     delete ui;
 }
+
+void key_team_before::on_key_team_before_pbn_clicked()
+{
+
+}
+
