@@ -42,7 +42,7 @@ color:white;
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>90</y>
+     <y>110</y>
      <width>371</width>
      <height>29</height>
     </rect>
@@ -67,7 +67,7 @@ border-radius:10px;
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>140</y>
+     <y>150</y>
      <width>371</width>
      <height>29</height>
     </rect>
@@ -142,7 +142,7 @@ border-radius:10px;
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>40</y>
+     <y>70</y>
      <width>371</width>
      <height>29</height>
     </rect>
@@ -208,6 +208,32 @@ padding:25px;
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbn_viewOrgan">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>30</y>
+     <width>371</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#pbn_viewOrgan{
+background-color:white;
+border-radius:10px;
+
+}
+
+#pbn_viewOrgan:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>View a organization</string>
    </property>
   </widget>
  </widget>

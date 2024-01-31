@@ -13,6 +13,18 @@ key_pass_organ::~key_pass_organ()
     delete ui;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 void key_pass_organ::on_pbn_pass_clicked()
 {
 
@@ -126,6 +138,7 @@ void key_pass_organ::on_pbn_pass_clicked()
 
 
     making_decision_for_organ *mdo=new making_decision_for_organ();
+    mdo->setUserName(UserName);
     mdo->show();
     this->close();
 }
