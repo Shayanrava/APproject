@@ -3,6 +3,7 @@
 #include"add_project_before.h"
 #include"delete_project_before.h"
 #include"add_team_before.h""
+#include"delete_team_before.h"
 #include "add_people.h"
 making_decision_for_organ::making_decision_for_organ(QWidget *parent)
     : QWidget(parent)
@@ -40,5 +41,12 @@ void making_decision_for_organ::on_add_team_clicked()
 {
     add_team_before *atb=new add_team_before();
     atb->show();
+}
+
+
+void making_decision_for_organ::on_delete_team_clicked()
+{
+    delete_team_before *dtb=new delete_team_before();
+    dtb->show();
 }
 
