@@ -13,6 +13,7 @@ SOURCES += \
     add_project_before.cpp \
     admins.cpp \
     comment.cpp \
+    delete_project_before.cpp \
     entrance_organ.cpp \
     filtering_organizations.cpp \
     forget.cpp \
@@ -36,6 +37,7 @@ HEADERS += \
     add_project_before.h \
     admins.h \
     comment.h \
+    delete_project_before.h \
     enter.h \
     entrance_organ.h \
     filtering_organizations.h \
@@ -56,6 +58,7 @@ HEADERS += \
 FORMS += \
     add_people.ui \
     add_project_before.ui \
+    delete_project_before.ui \
     enter.ui \
     entrance_organ.ui \
     filtering_organizations.ui \

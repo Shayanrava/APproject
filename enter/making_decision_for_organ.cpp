@@ -25,3 +25,9 @@ void making_decision_for_organ::on_add_project_clicked()
     apb->show();
 }
 
+
+void making_decision_for_organ::on_delete_project_clicked()
+{
+
+}
+

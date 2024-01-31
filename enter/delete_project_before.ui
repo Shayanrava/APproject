@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>delete_project_before</class>
+ <widget class="QWidget" name="delete_project_before">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>619</width>
+    <height>415</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#delete_project_before
+{
+background-color:black;
+}</string>
+  </property>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
