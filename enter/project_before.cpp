@@ -1,6 +1,7 @@
 #include "project_before.h"
 #include "ui_project_before.h"
 #include"change_member_task_in_project.h"
+#include"view_member_task_in_project.h"
 project_before::project_before(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::project_before)
@@ -22,6 +23,7 @@ void project_before::on_change_task_person_pbn_clicked()
 
 void project_before::on_view_task_person_pbn_clicked()
 {
-
+    view_member_task_in_project *nmt=new view_member_task_in_project();
+    nmt->show();
 }
 
