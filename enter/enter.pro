@@ -15,6 +15,7 @@ SOURCES += \
     admin_before.cpp \
     admins.cpp \
     change_member_task_in_project.cpp \
+    change_member_task_in_team.cpp \
     comment.cpp \
     delete_project_before.cpp \
     delete_team_before.cpp \
@@ -48,6 +49,7 @@ HEADERS += \
     admin_before.h \
     admins.h \
     change_member_task_in_project.h \
+    change_member_task_in_team.h \
     comment.h \
     delete_project_before.h \
     delete_team_before.h \
@@ -79,6 +81,7 @@ FORMS += \
     add_team_before.ui \
     admin_before.ui \
     change_member_task_in_project.ui \
+    change_member_task_in_team.ui \
     delete_project_before.ui \
     delete_team_before.ui \
     enter.ui \

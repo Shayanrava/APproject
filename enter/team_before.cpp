@@ -12,3 +12,9 @@ team_before::~team_before()
 {
     delete ui;
 }
+
+void team_before::on_change_member_task_pbn_clicked()
+{
+
+}
+
