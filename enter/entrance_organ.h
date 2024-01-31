@@ -18,10 +18,12 @@ class entrance_organ : public QMainWindow
 public:
     entrance_organ(QWidget *parent = nullptr);
     ~entrance_organ();
-
-//    QString n;
+void setName(QString Name);
 
 private slots:
+
+
+
     void on_pbn_making_clicked();
 
     void on_pbn_removing_clicked();
@@ -31,6 +33,8 @@ private slots:
     void on_pbn_login_clicked();
 
 private:
+    QString userName;
+
 
     Ui::entrance_organ *ui;
 };

@@ -34,6 +34,7 @@ void removing_organization::on_pbn_remove_clicked()
     //----------------------------------------------------------------
     QFile file2("org.txt");
 
+
     file2.open(QIODevice::ReadOnly | QIODevice::Text);
 
     QString organRead( file2.readAll());
@@ -48,26 +49,28 @@ void removing_organization::on_pbn_remove_clicked()
 
         if(listOrgan[i]==ui->led_remove->text()){
 
-            for(int j=0;j<listOrgan[i].length();j++){
-                listOrgan[i][j]=' ';
-            }
+            listOrgan[i]=listOrgan[listOrgan.length()-1];
+
+            break;
+
+//            for(int j=0;j<listOrgan[i].length();j++){
+
+//                listOrgan[i][j]=' ';
+//            }
+
         }
+
 
     }
 
 
-     QFile file3("enter.txt");
 
-    file3.open(QIODevice::ReadOnly | QIODevice::Text);
-     QString useread( file3.readAll());
-    file3.close();
 
-    QStringList name=useread.split("  ");
 
     QString organName=ui->led_remove->text();
 
 
-    // ذخیره ساذمان
+    // ذخیره سازمان
     organName+=".txt";
 
      QFile file(organName);
@@ -76,25 +79,31 @@ void removing_organization::on_pbn_remove_clicked()
      {
          QTextStream outStream(&file);
 
+         file.resize(0);
 
-
-         outStream<<"\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n";
         file.close();
 
 
-        file2.open((QIODevice::WriteOnly | QIODevice::Text|QIODevice::Append));
+        file2.open((QIODevice::WriteOnly | QIODevice::Text));
 
-        QTextStream ts;
+        QTextStream ts(&file2);
 
-        ts<<"\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n";
+        file2.resize(0);
 
-        for(int i=0;i<listOrgan.length();i++){
+        file2.close();
 
-            ts<<listOrgan[i]<<"  ";
+        file2.open((QIODevice::WriteOnly | QIODevice::Text));
+
+         QTextStream ts2(&file2);
+
+
+        for(int i=0;i<listOrgan.length()-1;i++){
+
+            ts2<<listOrgan[i]<<"  ";
 
         }
 
-         file2.close();
+       file2.close();
 
 
          ui->led_remove->setStyleSheet("background-color:green;");
@@ -109,4 +118,9 @@ void removing_organization::on_pbn_remove_clicked()
 
 }
 
+}
+
+void removing_organization::setUserName(QString Name){
+
+    UserName=Name;
 }

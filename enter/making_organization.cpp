@@ -72,19 +72,11 @@ void making_organization::on_pbn_making_clicked()
      //----------------------------------------------------------------
     //----------------------------وجود از قبل------------------------------------
     //----------------------------------------------------------------
-  // اسم یارو که ذخیره شد
-     QFile file3("enter.txt");
-
-    file3.open(QIODevice::ReadOnly | QIODevice::Text);
-     QString useread( file3.readAll());
-    file3.close();
-
-    QStringList name=useread.split("  ");
 
     QString organName=ui->led_making->text();
 
 
-    // ذخیره ساذمان
+    // ذخیره سازمان
     organName+=".txt";
 
      QFile file(organName);
@@ -93,9 +85,10 @@ void making_organization::on_pbn_making_clicked()
      {
          QTextStream outStream(&file);
 
-        outStream<<name[0];
+        outStream<<UserName<<"  ";
 
          outStream<<"\n \n";
+
         file.close();
 
 
@@ -124,5 +117,10 @@ void making_organization::on_pbn_making_clicked()
 
 
      }
+}
+
+void making_organization::setUserName(QString Name){
+
+    UserName=Name;
 }
 

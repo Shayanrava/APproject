@@ -18,11 +18,15 @@ public:
     explicit removing_organization(QWidget *parent = nullptr);
     ~removing_organization();
 
+    void setUserName(QString Name);
+
 private slots:
     void on_pbn_remove_clicked();
 
 private:
     Ui::removing_organization *ui;
+
+    QString UserName;
 };
 
 #endif // REMOVING_ORGANIZATION_H

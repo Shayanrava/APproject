@@ -177,4 +177,10 @@ outStream<<User<<" ";
                 file->close();
 
 
+                QTimer::singleShot(2000,[=](){
+                    this->close();
+
+                });
+
+
 }

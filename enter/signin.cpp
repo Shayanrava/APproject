@@ -54,6 +54,8 @@ void signin::readinfo(){
         return;
     }
 
+    QString userName=ui->leduser->text(),password=ui->ledpas->text();
+
     file->open(QIODevice::ReadOnly | QIODevice::Text);
  QString useread( file->readAll());
  file->close();
@@ -63,21 +65,14 @@ void signin::readinfo(){
 
  // سه تا ورودی تو ساین آپ گرفتیم دیگه
  for(int i=0;i<listuser.length();i+=3){
-if(ui->leduser->text()==listuser[i]&&ui->ledpas->text()==listuser[i+1]){
+if(userName==listuser[i]&&password==listuser[i+1]){
 
     ui->leduser->setStyleSheet("background-color:green;");
      ui->ledpas->setStyleSheet("background-color:green;");
-     ui->ledpas->setText("Login successful");
+     ui->leduser->setText("Login successful");
 
-     nameEnter=ui->leduser->text();
-     QFile f2("enter.txt");
 
-     f2.open(QIODevice::WriteOnly | QIODevice::Text);
-
-      QTextStream Qout(&f2);
-
-      Qout<<nameEnter;
-      f2.close();
+     entertomenue->setName(userName);
 
      QTimer::singleShot(2000,[=](){
 
@@ -88,7 +83,8 @@ if(ui->leduser->text()==listuser[i]&&ui->ledpas->text()==listuser[i+1]){
      break;
 }
 else{
-    if(i==listuser.length()-3){
+
+    if(i==listuser.length()-1){
     ui->leduser->setStyleSheet("background-color:red;");
      ui->ledpas->setStyleSheet("background-color:red;");
      ui->leduser->setText("The username or password is wrong");
