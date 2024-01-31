@@ -12,6 +12,7 @@ SOURCES += \
     add_people.cpp \
     add_project_before.cpp \
     add_team_before.cpp \
+    admin_before.cpp \
     admins.cpp \
     comment.cpp \
     delete_project_before.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     add_people.h \
     add_project_before.h \
     add_team_before.h \
+    admin_before.h \
     admins.h \
     comment.h \
     delete_project_before.h \
@@ -63,6 +65,7 @@ FORMS += \
     add_people.ui \
     add_project_before.ui \
     add_team_before.ui \
+    admin_before.ui \
     delete_project_before.ui \
     delete_team_before.ui \
     enter.ui \

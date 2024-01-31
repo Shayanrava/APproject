@@ -50,3 +50,9 @@ void making_decision_for_organ::on_delete_team_clicked()
     dtb->show();
 }
 
+
+void making_decision_for_organ::on_admin_clicked()
+{
+
+}
+
