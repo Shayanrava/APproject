@@ -203,7 +203,7 @@ border-radius:10px;
 background-color:white;
 border-radius:10px;
 color:black;
- text-align: center;
+padding:25px;
 }</string>
    </property>
    <property name="text">

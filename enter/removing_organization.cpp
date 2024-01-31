@@ -15,6 +15,10 @@ removing_organization::~removing_organization()
 
 void removing_organization::on_pbn_remove_clicked()
 {
+
+    //----------------------------------------------------------------
+    //-----------------------------خالی نبودن -----------------------------------
+    //----------------------------------------------------------------
      if(ui->led_remove->text()==""){
 
         ui->led_remove->setStyleSheet("background-color:red;");
@@ -30,7 +34,7 @@ void removing_organization::on_pbn_remove_clicked()
         return;
     }
      //----------------------------------------------------------------
-    //-----------------------------خالی نبودن -----------------------------------
+    //-------------------------------پیدا نشدن----------------------------------
     //----------------------------------------------------------------
     QFile file2("org.txt");
 
@@ -78,16 +82,57 @@ QString removeOrgan=ui->led_remove->text();
 
     }
 
-
+    //----------------------------------------------------------------
+    //-------------------------------دسترسی ناکافی----------------------------------
+    //----------------------------------------------------------------
 
 
     QString organName=ui->led_remove->text();
 
 
     // ذخیره سازمان
+
     organName+=".txt";
 
+
      QFile file(organName);
+
+     file.open(QIODevice::ReadOnly | QIODevice::Text);
+
+     QString useRead= file.readAll();
+
+     file.close();
+
+
+
+     QStringList listuse;
+
+     listuse=useRead.split("  ");
+
+     qDebug()<<UserName<<" "<<listuse[0];
+
+
+     if(listuse[0]!=UserName){
+
+         ui->led_remove->setStyleSheet("background-color:red;");
+
+         ui->led_remove->setText("you can't remove it");
+
+         QTimer::singleShot(4000,[=](){
+             ui->led_remove->setStyleSheet("background-color:white;");
+             ui->led_remove->setText("");
+
+
+         });
+         return;
+
+     }
+
+     //----------------------------------------------------------------
+     //-----------------------------------------------------------------
+     //----------------------------------------------------------------
+
+
 
     if( file.open(QIODevice::WriteOnly | QIODevice::Text))
      {
