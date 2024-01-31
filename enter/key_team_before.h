@@ -15,6 +15,9 @@ public:
     explicit key_team_before(QWidget *parent = nullptr);
     ~key_team_before();
 
+private slots:
+    void on_key_team_before_pbn_clicked();
+
 private:
     Ui::key_team_before *ui;
 };
