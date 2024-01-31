@@ -34,6 +34,7 @@ void removing_organization::on_pbn_remove_clicked()
     //----------------------------------------------------------------
     QFile file2("org.txt");
 
+QString removeOrgan=ui->led_remove->text();
 
     file2.open(QIODevice::ReadOnly | QIODevice::Text);
 
@@ -47,22 +48,35 @@ void removing_organization::on_pbn_remove_clicked()
 
     for(int i=0;i<listOrgan.length();i++){
 
-        if(listOrgan[i]==ui->led_remove->text()){
+        if(listOrgan[i]==removeOrgan){
 
-            listOrgan[i]=listOrgan[listOrgan.length()-1];
+            listOrgan.remove(i);
 
             break;
 
-//            for(int j=0;j<listOrgan[i].length();j++){
+        }
 
-//                listOrgan[i][j]=' ';
-//            }
+        else{
+            if(i==listOrgan.length()-1){
+                ui->led_remove->setStyleSheet("background-color:red;");
+
+                ui->led_remove->setText("The organization not found");
+
+                QTimer::singleShot(4000,[=](){
+                   ui->led_remove->setStyleSheet("background-color:white;");
+                    ui->led_remove->setText("");
+
+
+                });
+                return;
+
+            }
+
 
         }
 
 
     }
-
 
 
 
@@ -97,7 +111,7 @@ void removing_organization::on_pbn_remove_clicked()
          QTextStream ts2(&file2);
 
 
-        for(int i=0;i<listOrgan.length()-1;i++){
+        for(int i=0;i<listOrgan.length();i++){
 
             ts2<<listOrgan[i]<<"  ";
 
@@ -108,7 +122,7 @@ void removing_organization::on_pbn_remove_clicked()
 
          ui->led_remove->setStyleSheet("background-color:green;");
 
-         ui->led_remove->setText("organization built successfully");
+         ui->led_remove->setText("organization remove successfully");
 
         QTimer::singleShot(4000,[=](){
 
