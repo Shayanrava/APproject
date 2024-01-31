@@ -15,6 +15,9 @@ public:
     explicit project_before(QWidget *parent = nullptr);
     ~project_before();
 
+private slots:
+    void on_change_task_person_pbn_clicked();
+
 private:
     Ui::project_before *ui;
 };
