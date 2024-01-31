@@ -27,6 +27,8 @@ private slots:
 
     void on_delete_team_clicked();
 
+    void on_admin_clicked();
+
 private:
     Ui::making_decision_for_organ *ui;
     QString UserName;

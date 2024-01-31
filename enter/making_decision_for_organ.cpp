@@ -4,6 +4,7 @@
 #include"delete_project_before.h"
 #include"add_team_before.h""
 #include"delete_team_before.h"
+#include"admin_before.h"
 #include "add_people.h"
 making_decision_for_organ::making_decision_for_organ(QWidget *parent)
     : QWidget(parent)
@@ -53,6 +54,7 @@ void making_decision_for_organ::on_delete_team_clicked()
 
 void making_decision_for_organ::on_admin_clicked()
 {
-
+    admin_before *ab=new admin_before();
+    ab->show();
 }
 
