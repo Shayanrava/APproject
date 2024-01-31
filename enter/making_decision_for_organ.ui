@@ -22,9 +22,9 @@ background-color:black;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>210</x>
      <y>30</y>
-     <width>331</width>
+     <width>391</width>
      <height>20</height>
     </rect>
    </property>
@@ -35,7 +35,7 @@ color:white;
 }</string>
    </property>
    <property name="text">
-    <string>What do you want to do with this organization?</string>
+    <string>Which part of the organization do you want to work with?</string>
    </property>
   </widget>
   <widget class="QPushButton" name="add_project">
