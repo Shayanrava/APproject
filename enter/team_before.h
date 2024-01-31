@@ -18,6 +18,8 @@ public:
 private slots:
     void on_change_member_task_pbn_clicked();
 
+    void on_view_member_task_pbn_clicked();
+
 private:
     Ui::team_before *ui;
 };
