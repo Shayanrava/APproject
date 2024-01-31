@@ -20,3 +20,7 @@ void making_decision_for_organ::on_pbn_pepoleTooRGAN_clicked()
     this->close();
 }
 
+void making_decision_for_organ::setUserName(QString Name){
+
+    UserName=Name;
+}

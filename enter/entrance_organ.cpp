@@ -51,6 +51,9 @@ void entrance_organ::on_pbn_filter_clicked()
 void entrance_organ::on_pbn_login_clicked()
 {
     key_pass_organ *kpo=new key_pass_organ();
+
+    kpo->setUserName(userName);
+
     kpo->show();
 }
 
