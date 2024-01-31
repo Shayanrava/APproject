@@ -15,6 +15,9 @@ public:
     explicit key_project_before(QWidget *parent = nullptr);
     ~key_project_before();
 
+private slots:
+    void on_key_project_before_pbn_clicked();
+
 private:
     Ui::key_project_before *ui;
 };
