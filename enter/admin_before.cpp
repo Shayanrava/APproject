@@ -44,76 +44,88 @@ void admin_before::on_add_admin_pbn_clicked()
         return;
     }
      //----------------------------------------------------------------
-    //-------------------------------پیدا نشدن----------------------------------
+    //-------------------------------تکرار----------------------------------
     //----------------------------------------------------------------
 
 
-     QFile f(add+".txt");
+     QFile f(organName+".txt");
+     f.open(QIODevice::ReadOnly | QIODevice::Text);
 
-     if(!f.open(QIODevice::ReadOnly | QIODevice::Text)){
+     QString readorgan( f.readAll());
 
-         ui->led_add->setStyleSheet("background-color:red;");
+     f.close();
 
-         ui->led_add->setText("No such person was found");
+     QStringList list,listadmins;
 
-         QTimer::singleShot(2000,[=](){
-             ui->led_add->setStyleSheet("background-color:white;");
-             ui->led_add->setText("");
+     list=readorgan.split("\n");
+
+     listadmins=list[0].split("  ");
+
+     for(int i=0;i<listadmins.length();i++){
+
+         if(add==listadmins[i]){
+             ui->led_add->setStyleSheet("background-color:red;");
+
+             ui->led_add->setText("This admin already exists");
+
+             QTimer::singleShot(2000,[=](){
+                 ui->led_add->setStyleSheet("background-color:white;");
+                 ui->led_add->setText("");
+                 });
+             return;
+
+         }
+
+     }
+
+
+
+     //----------------------------------------------------------------
+    //--------------------------------پیدا نشدن---------------------------------
+    //----------------------------------------------------------------
+
+     QFile frepeat("userinformation.txt");
+
+    frepeat.open(QIODevice::ReadOnly | QIODevice::Text);
+ QString readrepeat( frepeat.readAll());
+ frepeat.close();
+
+ QStringList arruser;
+ arruser=readrepeat.split(" ");
+
+
+
+
+ for(int i=0;i<arruser.length();i+=3){
+
+     if(add==arruser[i]){
+
+         break;
+     }
+     else{
+         if(i==arruser.length()-1){
+
+             ui->led_add->setStyleSheet("background-color:red;");
+         ui->led_add->setText("This username not found");
+             QTimer::singleShot(2000,[=](){
+                 ui->led_add->setText("");
+                 ui->led_add->setStyleSheet("background-color:white;");
+
              });
-         return;
+
+
+             return;
+         }
+
+     }
+
 
 }
 
 
-    //----------------------------------------------------------------
-    //-------------------------------دسترسی ناکافی----------------------------------
-    //----------------------------------------------------------------
 
 
-//    QString organName=ui->led_remove->text();
-
-
-//    // ذخیره سازمان
-
-//    organName+=".txt";
-
-
-//     QFile file(organName);
-
-//     file.open(QIODevice::ReadOnly | QIODevice::Text);
-
-//     QString useRead= file.readAll();
-
-//     file.close();
-
-
-
-//     QStringList listuse,listadmin,listproject,listteam;
-
-//     listuse=useRead.split("\n");
-
-//     listadmin=listuse[0].split("  ");
-//     listproject=listuse[1].split("  ");
-//     listteam=listuse[2].split("  ");
-
-
-
-//     if(listadmin[0]!=UserName){
-
-//         ui->led_remove->setStyleSheet("background-color:red;");
-
-//         ui->led_remove->setText("you can't remove it");
-
-//         QTimer::singleShot(4000,[=](){
-//             ui->led_remove->setStyleSheet("background-color:white;");
-//             ui->led_remove->setText("");
-
-
-//         });
-//         return;
-
-//     }
-
+//--------------------------------------------------------------------------------
 
      QFile file2(organName+".txt");
 
@@ -153,6 +165,69 @@ void admin_before::on_add_admin_pbn_clicked()
 
 void admin_before::on_delete_admin_pbn_clicked()
 {
+
+    QString remove=ui->led_remove->text();
+//    ----------------------------------------------------------------
+//    -----------------------------خالی نبودن -----------------------------------
+//    ----------------------------------------------------------------
+     if(remove==""){
+
+        ui->led_remove->setStyleSheet("background-color:red;");
+
+        ui->led_remove->setText("The organization name cannot be empty");
+
+        QTimer::singleShot(3000,[=](){
+           ui->led_remove->setStyleSheet("background-color:white;");
+           ui->led_remove->setText("");
+
+        });
+
+        return;
+    }
+
+
+//--------------------------------------------------------------------------------
+
+     QFile file2(organName+".txt");
+
+    file2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString organRead( file2.readAll());
+
+    file2.close();
+
+    QStringList listOrgan,listadmin;
+
+    listOrgan=organRead.split("\n");
+
+    listadmin=listOrgan[0].split("  ");
+
+    for(int i=0;i<listadmin.length();i++){
+        if(listadmin[i]==remove){
+            listadmin.remove(i);
+        }
+    }
+
+    file2.open(QIODevice::WriteOnly | QIODevice::Text);
+
+     QTextStream outStream(&file2);
+
+     for(int i=0;i<listadmin.length();i++){
+
+         outStream<<listadmin[i]<<"  ";
+     }
+
+     outStream<<"\n"<<listOrgan[1]<<"\n"<<listOrgan[2];
+
+              ui->led_remove->setStyleSheet("background-color:green;");
+
+              ui->led_remove->setText("add successfully");
+
+              QTimer::singleShot(2000,[=](){
+                  ui->led_remove->setStyleSheet("background-color:white;");
+                  ui->led_remove->setText("");
+                  });
+
 
 }
 
