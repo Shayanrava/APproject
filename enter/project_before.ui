@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>676</width>
-    <height>476</height>
+    <width>1073</width>
+    <height>567</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,8 +22,8 @@ background-color:black;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>30</y>
+     <x>390</x>
+     <y>270</y>
      <width>321</width>
      <height>20</height>
     </rect>
@@ -41,7 +41,7 @@ color:white;
   <widget class="QPushButton" name="change_task_person_pbn">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>80</y>
      <width>251</width>
      <height>29</height>
@@ -67,8 +67,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="view_task_person_pbn">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>140</y>
+     <x>810</x>
+     <y>80</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -93,8 +93,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="add_admin_pbn">
    <property name="geometry">
     <rect>
-     <x>42</x>
-     <y>200</y>
+     <x>30</x>
+     <y>530</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -119,8 +119,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="delete_admin_pbn">
    <property name="geometry">
     <rect>
-     <x>42</x>
-     <y>260</y>
+     <x>30</x>
+     <y>420</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -145,8 +145,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="view_admin_pbn">
    <property name="geometry">
     <rect>
-     <x>42</x>
-     <y>320</y>
+     <x>420</x>
+     <y>530</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -171,8 +171,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="add_member_pbn">
    <property name="geometry">
     <rect>
-     <x>42</x>
-     <y>380</y>
+     <x>30</x>
+     <y>310</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -197,8 +197,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="delete_member_pbn">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>80</y>
+     <x>30</x>
+     <y>210</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -223,8 +223,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="view_member_pbn">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>140</y>
+     <x>420</x>
+     <y>180</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -249,8 +249,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="set_project_task_pbn">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>200</y>
+     <x>810</x>
+     <y>530</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -275,8 +275,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="view_project_task_pbn">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>260</y>
+     <x>810</x>
+     <y>420</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -301,8 +301,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="change_project_status_pbn">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>320</y>
+     <x>810</x>
+     <y>310</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -327,8 +327,8 @@ order:1px solid yellow;
   <widget class="QPushButton" name="view_project_status_pbn">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>380</y>
+     <x>810</x>
+     <y>210</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -348,6 +348,126 @@ order:1px solid yellow;
    </property>
    <property name="text">
     <string>Viewing status of project</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_add_adm">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>500</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_del_adm">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>390</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_add_mem">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>280</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_del_mem">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>180</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_set_taskpro">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>500</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_view_taskpro">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>390</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_chang_status">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>280</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_view_status">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>180</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_chan_taskmem">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_view_taskmem">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>50</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ted_view_adm">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>390</y>
+     <width>251</width>
+     <height>131</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ted_view_mem">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>40</y>
+     <width>251</width>
+     <height>131</height>
+    </rect>
    </property>
   </widget>
  </widget>

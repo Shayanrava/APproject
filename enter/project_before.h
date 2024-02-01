@@ -15,6 +15,9 @@ public:
     explicit project_before(QWidget *parent = nullptr);
     ~project_before();
 
+    void setUserName(QString Name);
+     void setOrganName(QString Name);
+
 private slots:
     void on_change_task_person_pbn_clicked();
 
@@ -22,6 +25,10 @@ private slots:
 
 private:
     Ui::project_before *ui;
+
+    QString UserName;
+
+    QString organName;
 };
 
 #endif // PROJECT_BEFORE_H
