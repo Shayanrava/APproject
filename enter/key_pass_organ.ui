@@ -23,7 +23,7 @@ background-color:black;
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>130</y>
+     <y>70</y>
      <width>591</width>
      <height>41</height>
     </rect>
@@ -63,7 +63,7 @@ font-size:30px;
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>190</y>
+     <y>140</y>
      <width>271</width>
      <height>31</height>
     </rect>
