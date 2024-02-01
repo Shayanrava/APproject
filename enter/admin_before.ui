@@ -22,16 +22,17 @@ background-color:black;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>300</x>
      <y>30</y>
-     <width>281</width>
-     <height>20</height>
+     <width>571</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -41,8 +42,8 @@ color:white;
   <widget class="QPushButton" name="add_admin_pbn">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>110</y>
+     <x>450</x>
+     <y>160</y>
      <width>311</width>
      <height>29</height>
     </rect>
@@ -57,6 +58,7 @@ order:1px solid yellow;
 {
 background-color:white;
 border-radius:10px;
+font-size:25px;
 }</string>
    </property>
    <property name="text">
@@ -66,8 +68,8 @@ border-radius:10px;
   <widget class="QPushButton" name="delete_admin_pbn">
    <property name="geometry">
     <rect>
-     <x>162</x>
-     <y>190</y>
+     <x>450</x>
+     <y>280</y>
      <width>311</width>
      <height>29</height>
     </rect>
@@ -82,6 +84,7 @@ order:1px solid yellow;
 {
 background-color:white;
 border-radius:10px;
+font-size:25px;
 }</string>
    </property>
    <property name="text">
@@ -91,8 +94,8 @@ border-radius:10px;
   <widget class="QPushButton" name="view_admins_pbn">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>430</y>
+     <x>450</x>
+     <y>530</y>
      <width>311</width>
      <height>29</height>
     </rect>
@@ -107,6 +110,7 @@ order:1px solid yellow;
 {
 background-color:white;
 border-radius:10px;
+font-size:25px;
 }</string>
    </property>
    <property name="text">
@@ -116,8 +120,8 @@ border-radius:10px;
   <widget class="QLineEdit" name="led_add">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>80</y>
+     <x>450</x>
+     <y>120</y>
      <width>311</width>
      <height>26</height>
     </rect>
@@ -126,8 +130,8 @@ border-radius:10px;
   <widget class="QLineEdit" name="led_remove">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>160</y>
+     <x>450</x>
+     <y>240</y>
      <width>311</width>
      <height>26</height>
     </rect>
@@ -136,8 +140,8 @@ border-radius:10px;
   <widget class="QTextEdit" name="ted_show">
    <property name="geometry">
     <rect>
-     <x>163</x>
-     <y>280</y>
+     <x>460</x>
+     <y>370</y>
      <width>301</width>
      <height>141</height>
     </rect>
