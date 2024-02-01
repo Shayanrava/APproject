@@ -22,16 +22,17 @@ background-color:black;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>50</y>
-     <width>301</width>
-     <height>20</height>
+     <x>300</x>
+     <y>130</y>
+     <width>591</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -41,16 +42,17 @@ color:white;
   <widget class="QLabel" name="label_pass">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>180</y>
-     <width>141</width>
-     <height>20</height>
+     <x>310</x>
+     <y>290</y>
+     <width>271</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label_pass
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -60,16 +62,17 @@ color:white;
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>80</y>
-     <width>131</width>
-     <height>20</height>
+     <x>470</x>
+     <y>190</y>
+     <width>271</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label_2
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -79,9 +82,9 @@ color:white;
   <widget class="QLineEdit" name="led_pass">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>180</y>
-     <width>221</width>
+     <x>620</x>
+     <y>300</y>
+     <width>241</width>
      <height>28</height>
     </rect>
    </property>
@@ -95,10 +98,10 @@ background-color:white;
   <widget class="QPushButton" name="pbn_pass">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>250</y>
-     <width>83</width>
-     <height>29</height>
+     <x>1052</x>
+     <y>550</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -111,6 +114,7 @@ order:1px solidgreen;
 {
 background-color:white;
 border-radius:10px;
+font-size:25px;
 }</string>
    </property>
    <property name="text">
