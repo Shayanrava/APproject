@@ -22,10 +22,10 @@ background-color:black;
   <widget class="QPushButton" name="pbn_remove">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>230</y>
-     <width>83</width>
-     <height>29</height>
+     <x>1042</x>
+     <y>550</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -38,6 +38,7 @@ order:1px solidgreen;
 {
 background-color:white;
 border-radius:10px;
+font-size:25px;
 }</string>
    </property>
    <property name="text">
@@ -47,10 +48,10 @@ border-radius:10px;
   <widget class="QLineEdit" name="led_remove">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>130</y>
-     <width>181</width>
-     <height>28</height>
+     <x>640</x>
+     <y>277</y>
+     <width>241</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -63,16 +64,17 @@ background-color:white;
   <widget class="QLabel" name="labe_remove_name">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>130</y>
-     <width>131</width>
-     <height>20</height>
+     <x>350</x>
+     <y>260</y>
+     <width>271</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#labe_remove_name
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -82,16 +84,17 @@ color:white;
   <widget class="QLabel" name="remov_label">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>30</y>
-     <width>361</width>
-     <height>20</height>
+     <x>230</x>
+     <y>50</y>
+     <width>751</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#remov_label
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
