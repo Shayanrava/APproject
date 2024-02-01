@@ -87,7 +87,7 @@ void making_organization::on_pbn_making_clicked()
 
         outStream<<UserName<<"  ";
 
-         outStream<<"\n \n";
+         outStream<<"\n\n";
 
         file.close();
 
@@ -97,6 +97,7 @@ void making_organization::on_pbn_making_clicked()
          QTextStream outStream2(&file2);
 
         outStream2<<ui->led_making->text()<<"  ";
+
 
          file2.close();
 

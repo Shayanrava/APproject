@@ -105,14 +105,17 @@ QString removeOrgan=ui->led_remove->text();
 
 
 
-     QStringList listuse;
+     QStringList listuse,listadmin,listproject,listteam;
 
-     listuse=useRead.split("  ");
+     listuse=useRead.split("\n");
 
-     qDebug()<<UserName<<" "<<listuse[0];
+     listadmin=listuse[0].split("  ");
+     listproject=listuse[1].split("  ");
+     listteam=listuse[2].split("  ");
 
 
-     if(listuse[0]!=UserName){
+
+     if(listadmin[0]!=UserName){
 
          ui->led_remove->setStyleSheet("background-color:red;");
 
@@ -131,6 +134,21 @@ QString removeOrgan=ui->led_remove->text();
      //----------------------------------------------------------------
      //-----------------------------------------------------------------
      //----------------------------------------------------------------
+
+
+     qDebug()<<UserName<<" "<<listproject.length();
+
+     for(int i=0;i<listproject.length();i++){
+
+         if(listproject[i]==""){
+             continue;
+         }
+
+         QFile file3(listproject[i]+".txt");
+         file3.resize(0);
+         file3.close();
+
+     }
 
 
 
