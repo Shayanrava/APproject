@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>project_before</class>
+ <widget class="QWidget" name="project_before">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>676</width>
+    <height>476</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#project_before
+{
+background-color:black;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>30</y>
+     <width>321</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>What do you want to do related to the project?</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="change_task_person_pbn">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#change_task_person_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#change_task_person_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Changing the task of the member</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="view_task_person_pbn">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#view_task_person_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#view_task_person_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Viewing task of member</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_admin_pbn">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>200</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#add_admin_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#add_admin_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Adding admin</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_admin_pbn">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>260</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#delete_admin_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#delete_admin_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Deleting admin</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="view_admin_pbn">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>320</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#view_admin_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#view_admin_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Viewing admins</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_member_pbn">
+   <property name="geometry">
+    <rect>
+     <x>42</x>
+     <y>380</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#add_member_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#add_member_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Adding member</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_member_pbn">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>80</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#delete_member_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#delete_member_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Deleting member</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="view_member_pbn">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>140</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#view_member_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#view_member_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Viewing member</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="set_project_task_pbn">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>200</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#set_project_task_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#set_project_task_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Setting task for project</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="view_project_task_pbn">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>260</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#view_project_task_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#view_project_task_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Viewing task of project</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="change_project_status_pbn">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>320</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#change_project_status_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#change_project_status_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Changing status of project</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="view_project_status_pbn">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>380</y>
+     <width>251</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#view_project_status_pbn{
+background-color:white;
+border-radius:10px;
+
+}
+
+#view_project_status_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Viewing status of project</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

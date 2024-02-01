@@ -18,7 +18,20 @@ public:
     void setUserName(QString Name);
 
 private slots:
-    void on_pbn_pepoleTooRGAN_clicked();
+
+    void on_add_project_clicked();
+
+    void on_delete_project_clicked();
+
+    void on_add_team_clicked();
+
+    void on_delete_team_clicked();
+
+    void on_admin_clicked();
+
+    void on_project_clicked();
+
+    void on_team_clicked();
 
 private:
     Ui::making_decision_for_organ *ui;

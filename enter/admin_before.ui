@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>admin_before</class>
+ <widget class="QWidget" name="admin_before">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#admin_before
+{
+background-color:black;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>30</y>
+     <width>281</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#label
+{
+color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string>What do you want to do with the admins?</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_admin_pbn">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>110</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#add_admin_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#add_admin_pbn
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Add admin</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_admin_pbn">
+   <property name="geometry">
+    <rect>
+     <x>162</x>
+     <y>190</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#delete_admin_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#delete_admin_pbn
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Delete admin</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="view_admins_pbn">
+   <property name="geometry">
+    <rect>
+     <x>162</x>
+     <y>270</y>
+     <width>311</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#view_admins_pbn:hover
+{
+background-color:yellow;
+order:1px solid yellow; 
+}
+#view_admins_pbn
+{
+background-color:white;
+border-radius:10px;
+}</string>
+   </property>
+   <property name="text">
+    <string>View admins</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
