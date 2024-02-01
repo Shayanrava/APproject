@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include<QFile>
-#include<QTextstream>
+#include<QTextStream>
 #include<QTimer>
 namespace Ui {
 class making_organization;

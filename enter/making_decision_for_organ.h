@@ -2,6 +2,9 @@
 #define MAKING_DECISION_FOR_ORGAN_H
 
 #include <QWidget>
+#include<QStringList>
+#include<QFile>
+#include<QTextStream>
 
 namespace Ui {
 class making_decision_for_organ;
@@ -16,6 +19,7 @@ public:
     ~making_decision_for_organ();
 
     void setUserName(QString Name);
+     void setOrganName(QString Name);
 
 private slots:
 
@@ -36,6 +40,7 @@ private slots:
 private:
     Ui::making_decision_for_organ *ui;
     QString UserName;
+    QString orgaName;
 };
 
 #endif // MAKING_DECISION_FOR_ORGAN_H

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>621</width>
-    <height>416</height>
+    <height>565</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -91,8 +91,8 @@ border-radius:10px;
   <widget class="QPushButton" name="view_admins_pbn">
    <property name="geometry">
     <rect>
-     <x>162</x>
-     <y>270</y>
+     <x>160</x>
+     <y>430</y>
      <width>311</width>
      <height>29</height>
     </rect>
@@ -111,6 +111,36 @@ border-radius:10px;
    </property>
    <property name="text">
     <string>View admins</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_add">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>80</y>
+     <width>311</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_remove">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>160</y>
+     <width>311</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="ted_show">
+   <property name="geometry">
+    <rect>
+     <x>163</x>
+     <y>280</y>
+     <width>301</width>
+     <height>141</height>
+    </rect>
    </property>
   </widget>
  </widget>

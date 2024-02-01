@@ -104,22 +104,29 @@ void key_pass_organ::on_pbn_pass_clicked()
 
     file.close();
 
-    QStringList listuse;
+    QStringList listuse,listadmin;
 
-    listuse=useRead.split("  ");
+    listuse=useRead.split("\n");
 
-    for(int i=0;i<listuse.length();i++){
+    listadmin=listuse[0].split("  ");
 
-        if(listuse[i]==UserName){
+    for(int i=0;i<listadmin.length();i++){
+
+        if(listadmin[i]==UserName){
 
             making_decision_for_organ *mdo=new making_decision_for_organ();
+            mdo->setUserName(UserName);
+
+            mdo->setOrganName(ui->led_pass->text());
+
             mdo->show();
             this->close();
+            return;
         }
 
 
         else{
-            if(i==listuse.length()-1){
+            if(i==listadmin.length()-1){
                 ui->led_pass->setStyleSheet("background-color:red;");
 
                 ui->led_pass->setText("you dont have access to it");
@@ -137,10 +144,10 @@ void key_pass_organ::on_pbn_pass_clicked()
     }
 
 
-    making_decision_for_organ *mdo=new making_decision_for_organ();
-    mdo->setUserName(UserName);
-    mdo->show();
-    this->close();
+//    making_decision_for_organ *mdo=new making_decision_for_organ();
+//    mdo->setUserName(UserName);
+//    mdo->show();
+//    this->close();
 }
 
 void key_pass_organ::setUserName(QString Name){

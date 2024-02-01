@@ -220,6 +220,27 @@ order:1px solid yellow;
     <string>Admin</string>
    </property>
   </widget>
+  <widget class="QLabel" name="lbl_access">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>450</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#lbl_access{
+
+background-color:white;
+padding:30px
+
+}</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

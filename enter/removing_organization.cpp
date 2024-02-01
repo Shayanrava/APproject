@@ -136,7 +136,7 @@ QString removeOrgan=ui->led_remove->text();
      //----------------------------------------------------------------
 
 
-     qDebug()<<UserName<<" "<<listproject.length();
+//     qDebug()<<UserName<<" "<<listproject.length();
 
      for(int i=0;i<listproject.length();i++){
 
@@ -144,11 +144,24 @@ QString removeOrgan=ui->led_remove->text();
              continue;
          }
 
-         QFile file3(listproject[i]+".txt");
+         QFile file3(listproject[i]+organName+".txt");
          file3.resize(0);
          file3.close();
 
      }
+
+     for(int i=0;i<listteam.length();i++){
+
+         if(listteam[i]==""){
+             continue;
+         }
+
+         QFile file3(listteam[i]+".txt");
+         file3.resize(0);
+         file3.close();
+
+     }
+
 
 
 

@@ -173,6 +173,11 @@ outStream<<User<<" ";
 
                 outStream<<PhoneNumber<<" ";
 
+   QFile f(User+".txt");
+   f.open(QIODevice::WriteOnly | QIODevice::Text|QIODevice::Append);
+
+   f.close();
+
 
                 file->close();
 
