@@ -22,8 +22,8 @@ background-color:black;
   <widget class="QLineEdit" name="lineEdit_Pass">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>110</y>
+     <x>550</x>
+     <y>130</y>
      <width>341</width>
      <height>26</height>
     </rect>
@@ -32,16 +32,16 @@ background-color:black;
   <widget class="QLabel" name="labelPhone">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>430</x>
      <y>60</y>
-     <width>51</width>
-     <height>20</height>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#labelPhone{
 color:rgb(238, 226, 63);
-
+font-size:30px;
 
 }</string>
    </property>
@@ -52,8 +52,8 @@ color:rgb(238, 226, 63);
   <widget class="QLineEdit" name="lineEdit_User">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>160</y>
+     <x>550</x>
+     <y>200</y>
      <width>341</width>
      <height>26</height>
     </rect>
@@ -62,16 +62,16 @@ color:rgb(238, 226, 63);
   <widget class="QLabel" name="labelpassword">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>110</y>
-     <width>101</width>
-     <height>20</height>
+     <x>330</x>
+     <y>120</y>
+     <width>201</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#labelpassword{
 color:rgb(238, 226, 63);
-
+font-size:30px;
 
 }</string>
    </property>
@@ -82,18 +82,18 @@ color:rgb(238, 226, 63);
   <widget class="QPushButton" name="pushButtonOk">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>220</y>
-     <width>93</width>
-     <height>29</height>
+     <x>550</x>
+     <y>310</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#pushButtonOk{
 background-color:rgb(238, 226, 63);
 border-radius:10px;
-
-
+color:black;
+font-size:25px;
 }</string>
    </property>
    <property name="text">
@@ -103,7 +103,7 @@ border-radius:10px;
   <widget class="QLineEdit" name="lineEdit_Phone">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>550</x>
      <y>60</y>
      <width>341</width>
      <height>26</height>
@@ -113,16 +113,16 @@ border-radius:10px;
   <widget class="QLabel" name="labelusername">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>160</y>
-     <width>101</width>
-     <height>20</height>
+     <x>330</x>
+     <y>180</y>
+     <width>201</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#labelusername{
 color:rgb(238, 226, 63);
-
+font-size:30px;
 
 }</string>
    </property>
