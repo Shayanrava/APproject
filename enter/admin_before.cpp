@@ -25,6 +25,7 @@ void admin_before::setOrganName(QString Name){
 
 void admin_before::on_add_admin_pbn_clicked()
 {
+    ui->ted_show->clear();
     QString add=ui->led_add->text();
 //    ----------------------------------------------------------------
 //    -----------------------------خالی نبودن -----------------------------------
@@ -165,7 +166,7 @@ void admin_before::on_add_admin_pbn_clicked()
 
 void admin_before::on_delete_admin_pbn_clicked()
 {
-
+ui->ted_show->clear();
     QString remove=ui->led_remove->text();
 //    ----------------------------------------------------------------
 //    -----------------------------خالی نبودن -----------------------------------
@@ -234,6 +235,32 @@ void admin_before::on_delete_admin_pbn_clicked()
 
 void admin_before::on_view_admins_pbn_clicked()
 {
+    QFile file2(organName+".txt");
+
+   file2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+   QString organRead( file2.readAll());
+
+   file2.close();
+
+   QStringList listOrgan,listadmin;
+
+   listOrgan=organRead.split("\n");
+
+   listadmin=listOrgan[0].split("  ");
+
+   for(int i=0;i<listadmin.length();i++){
+       if(i==0){
+        ui->ted_show->append(listadmin[i]+" (owner)");
+        continue;
+       }
+
+       if(listadmin[i]!=""){
+           ui->ted_show->append(listadmin[i]);
+       }
+
+
+   }
 
 }
 
