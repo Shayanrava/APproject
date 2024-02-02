@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>484</width>
-    <height>321</height>
+    <width>1166</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,16 +22,17 @@ background-color:black;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>20</y>
-     <width>231</width>
-     <height>20</height>
+     <x>360</x>
+     <y>60</y>
+     <width>461</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -41,9 +42,9 @@ color:white;
   <widget class="QLineEdit" name="view_mamber_task_led">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>80</y>
-     <width>251</width>
+     <x>450</x>
+     <y>200</y>
+     <width>281</width>
      <height>28</height>
     </rect>
    </property>
@@ -57,10 +58,10 @@ background-color:white;
   <widget class="QPushButton" name="view_task_member_pbn">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>270</y>
-     <width>83</width>
-     <height>29</height>
+     <x>1050</x>
+     <y>550</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -73,6 +74,7 @@ order:1px solidgreen;
 {
 background-color:white;
 border-radius:10px;
+font-size:25px;
 }</string>
    </property>
    <property name="text">

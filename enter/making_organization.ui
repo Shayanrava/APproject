@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>682</width>
-    <height>300</height>
+    <width>1166</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,16 +22,17 @@ background-color:black;
   <widget class="QLabel" name="label_">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>30</y>
-     <width>331</width>
-     <height>20</height>
+     <x>340</x>
+     <y>90</y>
+     <width>561</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label_
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -41,16 +42,17 @@ color:white;
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>60</y>
-     <width>131</width>
-     <height>20</height>
+     <x>510</x>
+     <y>160</y>
+     <width>271</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label_2
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -60,10 +62,10 @@ color:white;
   <widget class="QPushButton" name="pbn_making">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>250</y>
-     <width>83</width>
-     <height>29</height>
+     <x>1040</x>
+     <y>550</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -76,6 +78,7 @@ order:1px solidgreen;
 {
 background-color:white;
 border-radius:10px;
+font-size:25px;
 }</string>
    </property>
    <property name="text">
@@ -85,16 +88,17 @@ border-radius:10px;
   <widget class="QLabel" name="label_organName">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>150</y>
-     <width>141</width>
-     <height>20</height>
+     <x>300</x>
+     <y>280</y>
+     <width>271</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label_organName
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -104,10 +108,10 @@ color:white;
   <widget class="QLineEdit" name="led_making">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>150</y>
-     <width>201</width>
-     <height>28</height>
+     <x>610</x>
+     <y>290</y>
+     <width>241</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">

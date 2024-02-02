@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>644</width>
-    <height>401</height>
+    <width>1166</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,16 +22,17 @@ background-color:black;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>60</y>
-     <width>391</width>
-     <height>20</height>
+     <x>210</x>
+     <y>100</y>
+     <width>761</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#label
 {
 color:white;
+font-size:30px;
 }</string>
    </property>
    <property name="text">
@@ -41,10 +42,10 @@ color:white;
   <widget class="QLineEdit" name="add_project_led">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>150</y>
-     <width>271</width>
-     <height>28</height>
+     <x>430</x>
+     <y>270</y>
+     <width>311</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -57,10 +58,10 @@ background-color:white;
   <widget class="QPushButton" name="add_project_pbn">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>350</y>
-     <width>83</width>
-     <height>29</height>
+     <x>1050</x>
+     <y>550</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -73,6 +74,7 @@ order:1px solidgreen;
 {
 background-color:white;
 border-radius:10px;
+font-size:25px;
 }</string>
    </property>
    <property name="text">
