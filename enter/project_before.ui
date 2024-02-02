@@ -251,7 +251,7 @@ order:1px solid yellow;
    <property name="geometry">
     <rect>
      <x>810</x>
-     <y>530</y>
+     <y>550</y>
      <width>251</width>
      <height>29</height>
     </rect>
@@ -395,10 +395,13 @@ order:1px solid yellow;
    <property name="geometry">
     <rect>
      <x>810</x>
-     <y>500</y>
+     <y>520</y>
      <width>251</width>
      <height>26</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>Enter task</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="led_view_taskpro">
@@ -505,6 +508,19 @@ background-color:white;
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_set_tasktimepro">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>490</y>
+     <width>251</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enter time</string>
    </property>
   </widget>
  </widget>

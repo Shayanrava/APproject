@@ -187,13 +187,112 @@ void project_before::on_change_project_status_pbn_clicked()
 
 void project_before::on_view_project_task_pbn_clicked()
 {
-
+    ui->led_view_taskpro->setText("task: "+myproject.getTaskTitle()+"      time: "+myproject.getTaskTime());
 }
 
 
 void project_before::on_set_project_task_pbn_clicked()
 {
+    QFile f2(projectName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
 
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask,listcomment;
+    listtask=senderProject[0].split("  ");
+    listcomment=senderProject[1].split("  ");
+    listadmin=senderProject[2].split("  ");
+    listmem=senderProject[3].split("  ");
+
+// -------------------------------------------------------------------------------------------------------
+    QString time=ui->led_set_tasktimepro->text();
+    QString title=ui->led_set_taskpro->text();
+    if(title==""){
+
+       ui->led_set_taskpro->setStyleSheet("background-color:red;");
+
+
+       ui->led_set_taskpro->setText("The task or cannot be empty");
+
+       QTimer::singleShot(3000,[=](){
+          ui->led_set_taskpro->setStyleSheet("background-color:white;");
+           ui->led_set_taskpro->setText("Enter task");
+
+       });
+
+       return;
+   }
+    if(time==""){
+
+       ui->led_set_tasktimepro->setStyleSheet("background-color:red;");
+
+       ui->led_set_tasktimepro->setText("The time cannot be empty");
+
+       QTimer::singleShot(3000,[=](){
+          ui->led_set_tasktimepro->setStyleSheet("background-color:white;");
+           ui->led_set_tasktimepro->setText("Enter time");
+
+       });
+
+       return;
+   }
+    qDebug()<<"yes2";
+//-----------------------------------------------------------------------------------------------
+    listtask[2]=title;
+
+    listtask[3]=time;
+
+    qDebug()<<"yes";
+
+    f2.open(QIODevice::WriteOnly | QIODevice::Text);
+
+
+    QTextStream out(&f2);
+
+    for(int i=0;i<listtask.length();i++){
+if(listtask[i]==""){
+continue;
+}
+        out<<listtask[i]<<"  ";
+    }
+    out<<"\n";
+
+    for(int i=0;i<listcomment.length();i++){
+
+        out<<listcomment[i]<<"  ";
+    }
+     out<<"\n";
+
+     for(int i=0;i<listadmin.length();i++){
+
+         out<<listadmin[i]<<"  ";
+     }
+
+      out<<"\n";
+
+      for(int i=0;i<listmem.length();i++){
+
+          out<<listmem[i]<<"  ";
+      }
+       out<<"\n";
+
+       myproject.setTask(title);
+       myproject.setTaskTime(time);
+
+         ui->led_set_taskpro->setStyleSheet("background-color:green;");
+
+        ui->led_set_tasktimepro->setStyleSheet("background-color:green;");
+
+       QTimer::singleShot(3000,[=](){
+           ui->led_set_taskpro->setStyleSheet("background-color:white;");
+
+          ui->led_set_tasktimepro->setStyleSheet("background-color:white;");
+
+           ui->led_set_taskpro->setText("Enter task");
+           ui->led_set_tasktimepro->setText("Enter time");
+
+       });
 
 }
 
