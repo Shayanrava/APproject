@@ -107,6 +107,7 @@ void project_before::on_view_project_task_pbn_clicked()
 void project_before::on_set_project_task_pbn_clicked()
 {
 
+
 }
 
 
@@ -120,13 +121,21 @@ for(int i=0;i<myproject.peronelslength();i++){
 
 
 }
+for(int i=0;i<myproject.adminlength();i++){
+    if(myproject.adminFind(i)!=""){
 
+        ui->ted_view_adm->append(myproject.adminFind(i));
+    }
+
+
+}
 
 }
 
 
 void project_before::on_view_admin_pbn_clicked()
 {
+
 
 }
 
