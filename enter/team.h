@@ -28,6 +28,8 @@ public:
     bool removeAdminTeam(QString);
 
     QString adminsTeam(int);
+
+    int adminlength();
 // ----------------------------------
     void setTaskTime(QString );
 
@@ -48,6 +50,8 @@ public:
 
     bool removeMember(QString);
 
+    int peronelslength();
+
 //   ---------------------------------------------------
 
 
@@ -64,6 +68,8 @@ public:
     QString getName();
     void setOrgan(QString);
     QString getOrgan();
+
+
 
 };
 

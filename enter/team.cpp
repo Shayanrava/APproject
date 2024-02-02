@@ -103,9 +103,7 @@ bool team::addMember(QString UserName){
 }
 
 QString team::getMember(int Index){
-    if(Index<0||Index>personels.length()){
-        return "out of range index!!";
-    }
+
 
     return personels[Index];
 
@@ -223,5 +221,14 @@ nameOrgan=Name;
 QString team::getOrgan()
 {
 return nameOrgan;
+}
+int team::peronelslength(){
+
+    return personels.length();
+}
+
+int team::adminlength(){
+
+    return teamLeaders.adlength();
 }
 

@@ -93,8 +93,7 @@ qDebug()<<orgaName;
 
     }
 
-    team_before *tb=new team_before();
-    tb->show();
+
 }
 
 void key_team_before::setUserName(QString Name){

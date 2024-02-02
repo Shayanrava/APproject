@@ -177,13 +177,20 @@ void project_before::on_change_task_person_pbn_clicked()
     QTextStream tst(&f);
 
     for(int i=0;i<senduser.length();i++){
-
+if(senduser[i]==""){
+continue;
+}
      tst<<senduser[i]<<"  ";
 
 
     }
 
+        ui->led_namechange->setStyleSheet("background-color:green;");
+        QTimer::singleShot(2000,[=](){
+           ui->led_namechange->setStyleSheet("background-color:white;");
+            ui->led_namechange->setText("");
 
+        });
 
 
 }

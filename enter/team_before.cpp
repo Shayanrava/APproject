@@ -16,38 +16,309 @@ team_before::~team_before()
 
 void team_before::on_change_member_task_pbn_clicked()
 {
-    change_member_task_in_team *cmtt=new change_member_task_in_team();
-    cmtt->show();
+    QFile f2(teamName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask;
+    listtask=senderProject[0].split("  ");
+    listadmin=senderProject[1].split("  ");
+    listmem=senderProject[2].split("  ");
+
+// -----------------------------------------------------------------------------------------
+    QString name=ui->led_namechange->text(),newtime=ui->led_chan_tasktimemem->text(),newtask=ui->led_chan_taskmem->text();
+
+    if(name==""){
+        ui->led_namechange->setStyleSheet("background-color:red;");
+        ui->led_namechange->setText("The name cannot be empty");
+        QTimer::singleShot(2000,[=](){
+           ui->led_namechange->setStyleSheet("background-color:white;");
+            ui->led_namechange->setText("");
+
+        });
+        return;
+    }
+    if(newtime==""||newtask==""){
+        ui->led_chan_taskmem->setStyleSheet("background-color:red;");
+         ui->led_chan_tasktimemem->setStyleSheet("background-color:red;");
+
+        ui->led_chan_taskmem->setText("The new time and new task cannot be empty");
+        ui->led_chan_tasktimemem->setText("The new time and new task cannot be empty");
+        QTimer::singleShot(2000,[=](){
+           ui->led_chan_taskmem->setStyleSheet("background-color:white;");
+            ui->led_chan_taskmem->setText("Enter task");
+
+            ui->led_chan_tasktimemem->setStyleSheet("background-color:white;");
+             ui->led_chan_tasktimemem->setText("Enter time");
+
+        });
+        return;
+    }
+
+    for(int i=0;i<listmem.length();i++){
+        if(listmem[i]==name){
+            break;
+        }
+        if(i==listmem.length()-1){
+            ui->led_namechange->setStyleSheet("background-color:red;");
+            ui->led_namechange->setText("user not found attend in project");
+            QTimer::singleShot(2000,[=](){
+               ui->led_namechange->setStyleSheet("background-color:white;");
+                ui->led_namechange->setText("");
+
+            });
+            return;
+        }
+    }
+
+    QFile f(name+".txt");
+
+
+    f.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString readuser(f.readAll());
+
+    f.close();
+    QStringList senduser=readuser.split("  ");
+
+    for(int i=0;i<senduser.length();i++){
+
+
+        if(senduser[i]==organName&&senduser[i+1]==teamName){
+
+            senduser[i+2]=newtask;
+            senduser[i+3]=newtime;
+
+           break;
+        }
+
+
+    }
+
+
+    f.resize(0);
+
+    f.open(QIODevice::WriteOnly | QIODevice::Text);
+    QTextStream tst(&f);
+
+    for(int i=0;i<senduser.length();i++){
+
+     tst<<senduser[i]<<"  ";
+
+
+    }
+        ui->led_namechange->setStyleSheet("background-color:green;");
+        QTimer::singleShot(2000,[=](){
+           ui->led_namechange->setStyleSheet("background-color:white;");
+            ui->led_namechange->setText("");
+
+        });
+
+
 }
 
 
 void team_before::on_view_member_task_pbn_clicked()
 {
-    view_member_task_in_team *vtm=new view_member_task_in_team();
-    vtm->show();
+    QFile f2(teamName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask;
+    listtask=senderProject[0].split("  ");
+    listadmin=senderProject[1].split("  ");
+    listmem=senderProject[2].split("  ");
+// -----------------------------------------------------------------------------------------
+     QString name=ui->led_nameforview->text();
+
+     if(name==""){
+         ui->led_nameforview->setStyleSheet("background-color:red;");
+         ui->led_nameforview->setText("The name cannot be empty");
+         QTimer::singleShot(2000,[=](){
+            ui->led_nameforview->setStyleSheet("background-color:white;");
+             ui->led_nameforview->setText("");
+
+         });
+         return;
+     }
+     // -----------------------------------------------------------------------------------------
+
+     for(int i=0;i<listmem.length();i++){
+         if(listmem[i]==name){
+             break;
+         }
+         if(i==listmem.length()-1){
+             ui->led_nameforview->setStyleSheet("background-color:red;");
+             ui->led_nameforview->setText("user not found attend in project");
+             QTimer::singleShot(2000,[=](){
+                ui->led_nameforview->setStyleSheet("background-color:white;");
+                 ui->led_nameforview->setText("");
+
+             });
+             return;
+         }
+     }
+     // -----------------------------------------------------------------------------------------
+
+     QFile f(name+".txt");
+
+
+     f.open(QIODevice::ReadOnly | QIODevice::Text);
+
+     QString readuser(f.readAll());
+
+     f.close();
+     QStringList senduser=readuser.split("  ");
+
+     for(int i=0;i<senduser.length();i++){
+
+
+         if(senduser[i]==organName&&senduser[i+1]==teamName){
+           ui->led_view_taskmem->setText("task : "+senduser[i+2]+"    time : "+senduser[i+3]);
+            break;
+         }
+
+
+     }
 }
 
 void team_before::on_change_team_task_pbn_clicked()
 {
+
+    QFile f2(teamName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask;
+    listtask=senderProject[0].split("  ");
+    listadmin=senderProject[1].split("  ");
+    listmem=senderProject[2].split("  ");
+
+// -------------------------------------------------------------------------------------------------------
+    QString time=ui->led_chan_taskteam->text();
+    QString title=ui->led_chan_tasktime->text();
+    if(title==""){
+
+       ui->led_chan_taskteam->setStyleSheet("background-color:red;");
+
+
+       ui->led_chan_taskteam->setText("The task or cannot be empty");
+
+       QTimer::singleShot(3000,[=](){
+          ui->led_chan_taskteam->setStyleSheet("background-color:white;");
+           ui->led_chan_taskteam->setText("Enter task");
+
+       });
+
+       return;
+   }
+    if(time==""){
+
+       ui->led_chan_tasktime->setStyleSheet("background-color:red;");
+
+       ui->led_chan_tasktime->setText("The time cannot be empty");
+
+       QTimer::singleShot(3000,[=](){
+          ui->led_chan_tasktime->setStyleSheet("background-color:white;");
+           ui->led_chan_tasktime->setText("Enter time");
+
+       });
+
+       return;
+   }
+
+//-----------------------------------------------------------------------------------------------
+    listtask[2]=title;
+
+    listtask[3]=time;
+
+
+
+    f2.open(QIODevice::WriteOnly | QIODevice::Text);
+
+
+    QTextStream out(&f2);
+
+    for(int i=0;i<listtask.length();i++){
+if(listtask[i]==""){
+continue;
+}
+        out<<listtask[i]<<"  ";
+    }
+    out<<"\n";
+
+
+
+     for(int i=0;i<listadmin.length();i++){
+
+         out<<listadmin[i]<<"  ";
+     }
+
+      out<<"\n";
+
+      for(int i=0;i<listmem.length();i++){
+
+          out<<listmem[i]<<"  ";
+      }
+       out<<"\n";
+       f2.close();
+
+       myteam.setTaskTitle(title);
+       myteam.setTaskTime(time);
+
+         ui->led_chan_taskteam->setStyleSheet("background-color:green;");
+
+        ui->led_chan_tasktime->setStyleSheet("background-color:green;");
+
+       QTimer::singleShot(3000,[=](){
+           ui->led_chan_taskteam->setStyleSheet("background-color:white;");
+
+          ui->led_chan_tasktime->setStyleSheet("background-color:white;");
+
+           ui->led_chan_taskteam->setText("Enter task");
+           ui->led_chan_tasktime->setText("Enter time");
+
+       });
 
 }
 
 
 void team_before::on_view_task_pbn_clicked()
 {
+ ui->led_view_taskteam->setText("task: "+myteam.getTaskTitle()+"      time: "+myteam.getTaskTime());
 
 }
 
 
 void team_before::on_view_admins_pbn_clicked()
 {
+    for(int i=0;i<myteam.adminlength();i++){
+        if(myteam.adminsTeam(i)!=""){
 
+            ui->ted_view_adm->append(myteam.adminsTeam(i));
+        }
+
+
+    }
 }
 
 
 void team_before::on_view_member_pbn_clicked()
 {
+    for(int i=0;i<myteam.peronelslength();i++){
+        if(myteam.getMember(i)!=""){
 
+            ui->ted_view_mem->append(myteam.getMember(i));
+        }
+
+
+    }
 }
 
 
@@ -434,7 +705,9 @@ void team_before::on_add_member_pbn_clicked()
 
 }
 
- myteam.addMember(add);
+
+
+
 
  QFile f2(teamName+".txt");
  f2.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -446,6 +719,14 @@ void team_before::on_add_member_pbn_clicked()
  listtask=senderProject[0].split("  ");
  listadmin=senderProject[1].split("  ");
  listmem=senderProject[2].split("  ");
+
+ for(int i=0;i<listmem.length();i++){
+     if(listmem[i]==add){
+         return;
+     }
+
+ }
+ myteam.addMember(add);
 
  f2.resize(0);
 
