@@ -415,7 +415,85 @@ ui->led_add_mem->setStyleSheet("background-color:green;");
 
 void project_before::on_delete_admin_pbn_clicked()
 {
+    QFile f2(projectName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
 
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask,listcomment;
+    listtask=senderProject[0].split("  ");
+    listcomment=senderProject[1].split("  ");
+    listadmin=senderProject[2].split("  ");
+    listmem=senderProject[3].split("  ");
+//------------------------------------------------
+    if(UserName!=listadmin[0]){
+        return;
+    }
+//------------------------------------------------
+
+    QString del=ui->led_del_adm->text();
+    if(del==""){
+
+       ui->led_del_adm->setStyleSheet("background-color:red;");
+
+       ui->led_del_adm->setText("The  name cannot be empty");
+
+       QTimer::singleShot(4000,[=](){
+          ui->led_del_adm->setStyleSheet("background-color:white;");
+           ui->led_del_adm->setText("");
+
+       });
+
+       return;
+   }
+//------------------------------------------------------------------------------------
+    myproject.removeAdmin(del);
+
+    for (int i=0;i<listadmin.length();i++){
+        if(listadmin[i]==del){
+            listadmin.remove(i);
+        }
+    }
+    f2.open(QIODevice::WriteOnly | QIODevice::Text);
+
+    QTextStream out(&f2);
+
+    for(int i=0;i<listtask.length();i++){
+
+        out<<listtask[i]<<"  ";
+    }
+    out<<"\n";
+
+    for(int i=0;i<listcomment.length();i++){
+
+        out<<listcomment[i]<<"  ";
+    }
+     out<<"\n";
+
+     for(int i=0;i<listadmin.length();i++){
+    if(listadmin[i]==""){
+    continue;
+
+    }
+         out<<listadmin[i]<<"  ";
+     }
+
+      out<<"\n";
+
+      for(int i=0;i<listmem.length();i++){
+
+          out<<listmem[i]<<"  ";
+      }
+       out<<"\n";
+
+       ui->led_del_adm->setStyleSheet("background-color:green;");
+
+       QTimer::singleShot(3000,[=](){
+          ui->led_del_adm->setStyleSheet("background-color:white;");
+           ui->led_del_adm->setText("");
+
+       });
 }
 
 
@@ -432,7 +510,7 @@ void project_before::on_add_admin_pbn_clicked()
     listcomment=senderProject[1].split("  ");
     listadmin=senderProject[2].split("  ");
     listmem=senderProject[3].split("  ");
-
+//------------------------------------------------
     if(UserName!=listadmin[0]){
         return;
     }
@@ -500,7 +578,7 @@ for(int i=0;i<listadmin.length();i++){
     }
 
 }
-
+//------------------------------------------------
 myproject.newAdmin(add);
 
 
@@ -523,6 +601,7 @@ for(int i=0;i<listcomment.length();i++){
  for(int i=0;i<listadmin.length();i++){
 if(listadmin[i]==""){
 continue;
+
 }
      out<<listadmin[i]<<"  ";
  }
