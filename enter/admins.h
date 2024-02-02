@@ -15,6 +15,8 @@ public:
     QString get_name(int);
 
     QString remove(QString);
+
+    int adlength();
 };
 
 #endif // ADMINS_H

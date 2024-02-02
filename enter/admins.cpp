@@ -5,20 +5,25 @@ admins::admins() {}
 
 void admins::new_admin(QString Name)
 {
-    for(int i=0;i<admins_name.length();i++)
-    {
-        if(admins_name[i]==Name)
-        {
-//            قبلا اد شده
-         return;
-        }
-     if(i==admins_name.length()-1)
-        {
+//    for(int i=0;i<admins_name.length();i++)
+//    {
+//        if(admins_name[i]==Name)
+//        {
+////            قبلا اد شده
+//         return;
+//        }
+//     if(i==admins_name.length()-1)
+//        {
       admins_name.push_back(Name);
-        }
+//        }
 
-    }
+//    }
 
+}
+
+int admins::adlength(){
+
+    return admins_name.length();
 }
 
 QString admins::get_name(int index)

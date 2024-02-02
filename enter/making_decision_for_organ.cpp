@@ -121,7 +121,11 @@ void making_decision_for_organ::on_admin_clicked()
 void making_decision_for_organ::on_project_clicked()
 {
     key_project_before *kpb=new key_project_before();
-    kpb->show();
+
+        kpb->setOrganName(orgaName);
+        kpb->setUserName(UserName);
+
+        kpb->show();
 }
 
 

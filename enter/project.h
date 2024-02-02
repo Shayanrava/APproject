@@ -13,7 +13,7 @@ class project
     QString organName;
     task task_of_projects;
     admins admins_of_projects;
-    QVector<Person>personels;
+    QVector<QString>personels;
     QString status;
 public:
     project();
@@ -37,7 +37,8 @@ public:
     bool getTaskArchive();
 
 //    تنظیم و گرفتن ادمینها
-
+void loadAdmin(QString);
+int adminlength();
 void newAdmin(QString);
 QString removeAdmin(QString);
 QString adminFind(int);
@@ -45,7 +46,9 @@ QString adminFind(int);
 
 
 //گرفتن و تنظیم نفرات
-  void addMember(QString,QString,QString);
+int peronelslength();
+  void addMember(QString);
+  void loadMember(QString);
   void removeMember(QString);
   QString memberFind(int);
   void setTaskMember(QString,QString);

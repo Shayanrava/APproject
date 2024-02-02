@@ -27,6 +27,7 @@ private:
     Ui::key_pass_organ *ui;
 
     QString UserName;
+
 };
 
 #endif // KEY_PASS_ORGAN_H

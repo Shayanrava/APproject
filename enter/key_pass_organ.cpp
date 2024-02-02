@@ -154,3 +154,4 @@ void key_pass_organ::setUserName(QString Name){
 
     UserName=Name;
 }
+
