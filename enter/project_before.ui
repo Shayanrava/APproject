@@ -42,7 +42,7 @@ color:white;
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>80</y>
+     <y>110</y>
      <width>301</width>
      <height>29</height>
     </rect>
@@ -68,7 +68,7 @@ order:1px solid yellow;
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>80</y>
+     <y>110</y>
      <width>291</width>
      <height>29</height>
     </rect>
@@ -438,10 +438,13 @@ order:1px solid yellow;
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>50</y>
+     <y>80</y>
      <width>301</width>
      <height>26</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>Enter task</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="led_view_taskmem">
@@ -521,6 +524,39 @@ background-color:white;
    </property>
    <property name="text">
     <string>Enter time</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_chan_tasktimemem">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>301</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Enter time</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_namechange">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>301</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="led_nameforview">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>80</y>
+     <width>291</width>
+     <height>26</height>
+    </rect>
    </property>
   </widget>
  </widget>

@@ -87,15 +87,174 @@ void project_before::setprojectName(QString Name){
 
 void project_before::on_change_task_person_pbn_clicked()
 {
-//    change_member_task_in_project *cmt=new change_member_task_in_project();
-//    cmt->show();
+
+    QFile f2(projectName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask,listcomment;
+    listtask=senderProject[0].split("  ");
+    listcomment=senderProject[1].split("  ");
+    listadmin=senderProject[2].split("  ");
+    listmem=senderProject[3].split("  ");
+
+// -----------------------------------------------------------------------------------------
+    QString name=ui->led_namechange->text(),newtime=ui->led_chan_tasktimemem->text(),newtask=ui->led_chan_taskmem->text();
+
+    if(name==""){
+        ui->led_namechange->setStyleSheet("background-color:red;");
+        ui->led_namechange->setText("The name cannot be empty");
+        QTimer::singleShot(2000,[=](){
+           ui->led_namechange->setStyleSheet("background-color:white;");
+            ui->led_namechange->setText("");
+
+        });
+        return;
+    }
+    if(newtime==""||newtask==""){
+        ui->led_chan_taskmem->setStyleSheet("background-color:red;");
+         ui->led_chan_tasktimemem->setStyleSheet("background-color:red;");
+
+        ui->led_chan_taskmem->setText("The new time and new task cannot be empty");
+        ui->led_chan_tasktimemem->setText("The new time and new task cannot be empty");
+        QTimer::singleShot(2000,[=](){
+           ui->led_chan_taskmem->setStyleSheet("background-color:white;");
+            ui->led_chan_taskmem->setText("Enter task");
+
+            ui->led_chan_tasktimemem->setStyleSheet("background-color:white;");
+             ui->led_chan_tasktimemem->setText("Enter time");
+
+        });
+        return;
+    }
+
+    for(int i=0;i<listmem.length();i++){
+        if(listmem[i]==name){
+            break;
+        }
+        if(i==listmem.length()-1){
+            ui->led_namechange->setStyleSheet("background-color:red;");
+            ui->led_namechange->setText("user not found attend in project");
+            QTimer::singleShot(2000,[=](){
+               ui->led_namechange->setStyleSheet("background-color:white;");
+                ui->led_namechange->setText("");
+
+            });
+            return;
+        }
+    }
+
+    QFile f(name+".txt");
+
+
+    f.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString readuser(f.readAll());
+
+    f.close();
+    QStringList senduser=readuser.split("  ");
+
+    for(int i=0;i<senduser.length();i++){
+
+
+        if(senduser[i]==organName&&senduser[i+1]==projectName){
+
+            senduser[i+2]=newtask;
+            senduser[i+3]=newtime;
+
+           break;
+        }
+
+
+    }
+
+
+    f.resize(0);
+
+    f.open(QIODevice::WriteOnly | QIODevice::Text);
+    QTextStream tst(&f);
+
+    for(int i=0;i<senduser.length();i++){
+
+     tst<<senduser[i]<<"  ";
+
+
+    }
+
+
+
+
 }
 
 
 void project_before::on_view_task_person_pbn_clicked()
 {
-//    view_member_task_in_project *nmt=new view_member_task_in_project();
-//    nmt->show();
+
+    QFile f2(projectName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask,listcomment;
+    listtask=senderProject[0].split("  ");
+    listcomment=senderProject[1].split("  ");
+    listadmin=senderProject[2].split("  ");
+    listmem=senderProject[3].split("  ");
+// -----------------------------------------------------------------------------------------
+     QString name=ui->led_nameforview->text();
+
+     if(name==""){
+         ui->led_nameforview->setStyleSheet("background-color:red;");
+         ui->led_nameforview->setText("The name cannot be empty");
+         QTimer::singleShot(2000,[=](){
+            ui->led_nameforview->setStyleSheet("background-color:white;");
+             ui->led_nameforview->setText("");
+
+         });
+         return;
+     }
+     // -----------------------------------------------------------------------------------------
+
+     for(int i=0;i<listmem.length();i++){
+         if(listmem[i]==name){
+             break;
+         }
+         if(i==listmem.length()-1){
+             ui->led_nameforview->setStyleSheet("background-color:red;");
+             ui->led_nameforview->setText("user not found attend in project");
+             QTimer::singleShot(2000,[=](){
+                ui->led_nameforview->setStyleSheet("background-color:white;");
+                 ui->led_nameforview->setText("");
+
+             });
+             return;
+         }
+     }
+     // -----------------------------------------------------------------------------------------
+
+     QFile f(name+".txt");
+
+
+     f.open(QIODevice::ReadOnly | QIODevice::Text);
+
+     QString readuser(f.readAll());
+
+     f.close();
+     QStringList senduser=readuser.split("  ");
+
+     for(int i=0;i<senduser.length();i++){
+
+
+         if(senduser[i]==organName&&senduser[i+1]==projectName){
+           ui->led_view_taskmem->setText("task : "+senduser[i+2]+"    time : "+senduser[i+3]);
+            break;
+         }
+
+
+     }
 }
 
 
@@ -174,6 +333,7 @@ void project_before::on_change_project_status_pbn_clicked()
          out<<listmem[i]<<"  ";
      }
       out<<"\n";
+      f2.close();
 
       ui->led_chang_status->setStyleSheet("background-color:green;");
 
@@ -276,6 +436,7 @@ continue;
           out<<listmem[i]<<"  ";
       }
        out<<"\n";
+       f2.close();
 
        myproject.setTask(title);
        myproject.setTaskTime(time);
@@ -424,7 +585,7 @@ void project_before::on_delete_member_pbn_clicked()
 ui->led_del_mem->setStyleSheet("background-color:green;");
 
 
-
+f2.close();
 
 }
 
@@ -509,6 +670,7 @@ void project_before::on_add_member_pbn_clicked()
 
 ui->led_add_mem->setStyleSheet("background-color:green;");
 
+f2.close();
 
 }
 
@@ -585,6 +747,7 @@ void project_before::on_delete_admin_pbn_clicked()
           out<<listmem[i]<<"  ";
       }
        out<<"\n";
+       f2.close();
 
        ui->led_del_adm->setStyleSheet("background-color:green;");
 
@@ -712,6 +875,7 @@ continue;
       out<<listmem[i]<<"  ";
   }
    out<<"\n";
+   f2.close();
 
    ui->led_add_adm->setStyleSheet("background-color:green;");
 
