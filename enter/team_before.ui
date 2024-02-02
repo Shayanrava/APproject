@@ -318,7 +318,7 @@ order:1px solid yellow;
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="led_add_adm_2">
+  <widget class="QLineEdit" name="led_del_adm">
    <property name="geometry">
     <rect>
      <x>780</x>
@@ -396,6 +396,32 @@ order:1px solid yellow;
      <width>211</width>
      <height>101</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>120</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>250</y>
+     <width>63</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

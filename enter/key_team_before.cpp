@@ -38,7 +38,7 @@ void key_team_before::on_key_team_before_pbn_clicked()
     }
 
 // --------------------------------------------------------
-
+qDebug()<<orgaName;
     QFile file(orgaName+".txt");
 
     file.open(QIODevice::ReadOnly | QIODevice::Text);

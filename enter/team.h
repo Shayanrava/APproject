@@ -16,6 +16,8 @@ class team
 
     QString nameTeam;
 
+    QString nameOrgan;
+
 
     
 public:
@@ -60,6 +62,9 @@ public:
 //-------------------------------------------------------
     void setName(QString Name);
     QString getName();
+    void setOrgan(QString);
+    QString getOrgan();
+
 };
 
 #endif // TEAM_H

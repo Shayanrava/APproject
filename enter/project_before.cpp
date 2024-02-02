@@ -576,8 +576,8 @@ void project_before::on_delete_member_pbn_clicked()
 
  out<<senderProject[0]<<"\n"<<senderProject[1]<<"\n"<<senderProject[2]<<"\n";
 
- for(int i=0;i<listadmin.length();i++){
-if(listadmin[i]==""){
+ for(int i=0;i<listmem.length();i++){
+if(listmem[i]==""){
 continue;
 }
      out<<listmem[i]<<"  ";

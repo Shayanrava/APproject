@@ -2,6 +2,9 @@
 #define TEAM_BEFORE_H
 
 #include <QWidget>
+#include<QTimer>
+#include<QFile>
+#include "team.h"
 
 namespace Ui {
 class team_before;
@@ -24,6 +27,22 @@ private slots:
 
     void on_view_member_task_pbn_clicked();
 
+    void on_change_team_task_pbn_clicked();
+
+    void on_view_task_pbn_clicked();
+
+    void on_view_admins_pbn_clicked();
+
+    void on_view_member_pbn_clicked();
+
+    void on_add_admin_to_team_pbn_clicked();
+
+    void on_delete_admin_pbn_clicked();
+
+    void on_delete_member_pbn_clicked();
+
+    void on_add_member_pbn_clicked();
+
 private:
     Ui::team_before *ui;
 
@@ -32,6 +51,8 @@ private:
     QString organName;
 
     QString teamName;
+
+    team myteam;
 
 };
 

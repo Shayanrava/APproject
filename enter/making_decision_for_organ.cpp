@@ -132,6 +132,8 @@ void making_decision_for_organ::on_project_clicked()
 void making_decision_for_organ::on_team_clicked()
 {
     key_team_before *ktb=new key_team_before();
+    ktb->setOrganName(orgaName);
+    ktb->setUserName(UserName);
     ktb->show();
 }
 

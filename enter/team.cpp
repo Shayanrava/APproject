@@ -9,35 +9,20 @@ team::team()
 
 bool team::addAdminTeam(QString Name){
 
-    for(int i=0;i<personels.length();i++){
 
-           if(personels[i]==Name){
 
                teamLeaders.new_admin(Name);
 
-               return true;
-            }
-           else if(personels.length()-1){
-               return false;
-           }
 
-
-    }
 
 }
 
 bool team::removeAdminTeam(QString Name){
 
 
-   if(teamLeaders.remove(Name)== "Admin removed successfully"){
-       return true;
+   teamLeaders.remove(Name);
 
-   }
 
-   else{
-
-       return false;
-   }
 
 
 }
@@ -82,18 +67,38 @@ QString team::getTaskTime(){
 
 
 bool team::addMember(QString UserName){
-     QString address=UserName+".txt";
-      QFile file(address);
 
-       if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
-           personels.push_back(UserName);
-           return true;
-       }
+    for(int i=0;i<personels.length();i++){
 
-       else{
+        if(personels[i]==UserName){
+            return 0;
+        }
+    }
 
-           return false;
-       }
+
+    QString address=UserName+".txt";
+
+    //    organ  projectname  task  time  archive
+
+    QFile file(address);
+    if(file.open(QIODevice::WriteOnly | QIODevice::Text|QIODevice::Append)){
+
+           QTextStream outStream(&file);
+
+
+            outStream<<nameOrgan<<"  ";
+            outStream<<nameTeam<<"  ";
+            outStream<<"null"<<"  ";
+            outStream<<"null"<<"  ";
+            outStream<<true<<"  ";
+
+             file.close();
+
+             personels.push_back(UserName);
+
+    }
+
+
 
 }
 
@@ -108,21 +113,73 @@ QString team::getMember(int Index){
 
 bool team::removeMember(QString Name){
 
-    for(int i=0;i<personels.length();i++){
+    for(int i=0;i<personels.length();i++)
+    {
+        if(personels[i]==Name)
+        {
 
-        if(personels[i]==Name){
             personels.remove(i);
-            return true;
-        }
 
-        else{
-            if(i==personels.length()){
-                return false;
-            }
-        }
+            break;
+
+             }
+    }
+
+
+    QString address=Name+".txt";
+
+     QFile file(address);
+
+
+     if(file.open(QIODevice::ReadOnly | QIODevice::Text)){
+
+         QString useread( file.readAll());
+
+         file.close();
+
+         QStringList listuser;
+
+         listuser=useread.split("  ");
+
+
+
+         for(int i=0;i<listuser.length();i++){
+
+             if(listuser[i]==nameOrgan&&listuser[i+1]==nameTeam){
+
+
+                 listuser.remove(i,5);
+
+
+
+                 break;
+
+             }
+
+
+         }
+
+
+         if(file.open(QIODevice::WriteOnly | QIODevice::Text)){
+
+             for(int i=0;i<listuser.length();i++){
+
+                   QTextStream outStream(&file);
+
+                   outStream<<listuser[i]<<"  ";
+
+
+             }
+
+             file.close();
+             return 1;
+         }
+
 
 
     }
+
+
 
 }
 
@@ -158,4 +215,13 @@ QString team::getName()
     return nameTeam;
 }
 
+void team::setOrgan(QString Name)
+{
+nameOrgan=Name;
+}
+
+QString team::getOrgan()
+{
+return nameOrgan;
+}
 
