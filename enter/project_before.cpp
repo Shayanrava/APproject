@@ -58,7 +58,20 @@ void project_before::setUserName(QString Name){
 
     }
 
+if(UserName==listadmin[0]){
+    ui->lbladd->setStyleSheet("background-color:green;");
+     ui->lbldel->setStyleSheet("background-color:green;");
+     ui->lbldel->setText("access");
+     ui->lbladd->setText("access");
+}
+else{
+    ui->lbladd->setStyleSheet("background-color:red;");
+     ui->lbldel->setStyleSheet("background-color:red;");
+     ui->lbldel->setText("lock");
+     ui->lbladd->setText("lock");
 
+
+}
 
 
 }
@@ -74,20 +87,22 @@ void project_before::setprojectName(QString Name){
 
 void project_before::on_change_task_person_pbn_clicked()
 {
-    change_member_task_in_project *cmt=new change_member_task_in_project();
-    cmt->show();
+//    change_member_task_in_project *cmt=new change_member_task_in_project();
+//    cmt->show();
 }
 
 
 void project_before::on_view_task_person_pbn_clicked()
 {
-    view_member_task_in_project *nmt=new view_member_task_in_project();
-    nmt->show();
+//    view_member_task_in_project *nmt=new view_member_task_in_project();
+//    nmt->show();
 }
 
 
 void project_before::on_view_project_status_pbn_clicked()
 {
+
+    ui->led_view_status->setText(myproject.getStatus());
 
 }
 
@@ -95,6 +110,78 @@ void project_before::on_view_project_status_pbn_clicked()
 void project_before::on_change_project_status_pbn_clicked()
 {
 
+    QString statuspro=ui->led_chang_status->text();
+
+    if(statuspro==""){
+        ui->led_chang_status->setStyleSheet("background-color:red;");
+        ui->led_chang_status->setText("The new status cannot be empty");
+        QTimer::singleShot(2000,[=](){
+           ui->led_chang_status->setStyleSheet("background-color:white;");
+            ui->led_chang_status->setText("");
+
+        });
+        return;
+
+
+    }
+
+    myproject.setStatus(statuspro);
+
+
+
+    QFile f2(projectName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask,listcomment;
+    listtask=senderProject[0].split("  ");
+    listcomment=senderProject[1].split("  ");
+    listadmin=senderProject[2].split("  ");
+    listmem=senderProject[3].split("  ");
+
+    f2.resize(0);
+
+
+
+   listtask[4]=statuspro;
+
+   f2.open(QIODevice::WriteOnly | QIODevice::Text);
+
+   QTextStream out(&f2);
+
+   for(int i=0;i<listtask.length();i++){
+
+       out<<listtask[i]<<"  ";
+   }
+   out<<"\n";
+
+   for(int i=0;i<listcomment.length();i++){
+
+       out<<listcomment[i]<<"  ";
+   }
+    out<<"\n";
+
+    for(int i=0;i<listadmin.length();i++){
+
+        out<<listadmin[i]<<"  ";
+    }
+     out<<"\n";
+
+     for(int i=0;i<listmem.length();i++){
+
+         out<<listmem[i]<<"  ";
+     }
+      out<<"\n";
+
+      ui->led_chang_status->setStyleSheet("background-color:green;");
+
+      QTimer::singleShot(3000,[=](){
+         ui->led_chang_status->setStyleSheet("background-color:white;");
+          ui->led_chang_status->setText("");
+
+      });
 }
 
 
@@ -121,14 +208,7 @@ for(int i=0;i<myproject.peronelslength();i++){
 
 
 }
-for(int i=0;i<myproject.adminlength();i++){
-    if(myproject.adminFind(i)!=""){
 
-        ui->ted_view_adm->append(myproject.adminFind(i));
-    }
-
-
-}
 
 }
 
@@ -136,7 +216,14 @@ for(int i=0;i<myproject.adminlength();i++){
 void project_before::on_view_admin_pbn_clicked()
 {
 
+    for(int i=0;i<myproject.adminlength();i++){
+        if(myproject.adminFind(i)!=""){
 
+            ui->ted_view_adm->append(myproject.adminFind(i));
+        }
+
+
+    }
 }
 
 
@@ -147,7 +234,7 @@ void project_before::on_delete_member_pbn_clicked()
 
        ui->led_del_mem->setStyleSheet("background-color:red;");
 
-       ui->led_del_mem->setText("The organization name cannot be empty");
+       ui->led_del_mem->setText("The  name cannot be empty");
 
        QTimer::singleShot(4000,[=](){
           ui->led_del_mem->setStyleSheet("background-color:white;");
@@ -197,12 +284,12 @@ void project_before::on_delete_member_pbn_clicked()
 }
 
  myproject.removeMember(del);
-qDebug()<<"yes2";
+
  QFile f2(projectName+".txt");
  f2.open(QIODevice::ReadOnly | QIODevice::Text);
 
  QString reader(f2.readAll());
-qDebug()<<"yes3";
+
  f2.close();
  QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask;
  listtask=senderProject[0].split("  ");
@@ -211,7 +298,7 @@ qDebug()<<"yes3";
 
  f2.resize(0);
 
- qDebug()<<"yes";
+
 
  for(int i=0;i<listmem.length();i++){
 
@@ -221,7 +308,7 @@ qDebug()<<"yes3";
      }
 
  }
- qDebug()<<"yes4";
+
 
  f2.open(QIODevice::WriteOnly | QIODevice::Text);
 
@@ -250,7 +337,7 @@ void project_before::on_add_member_pbn_clicked()
 
        ui->led_add_mem->setStyleSheet("background-color:red;");
 
-       ui->led_add_mem->setText("The organization name cannot be empty");
+       ui->led_add_mem->setText("The  name cannot be empty");
 
        QTimer::singleShot(4000,[=](){
           ui->led_add_mem->setStyleSheet("background-color:white;");
@@ -334,6 +421,129 @@ void project_before::on_delete_admin_pbn_clicked()
 
 void project_before::on_add_admin_pbn_clicked()
 {
+    QFile f2(projectName+".txt");
+    f2.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QString reader(f2.readAll());
+
+    f2.close();
+    QStringList senderProject=reader.split("\n"),listadmin,listmem,listtask,listcomment;
+    listtask=senderProject[0].split("  ");
+    listcomment=senderProject[1].split("  ");
+    listadmin=senderProject[2].split("  ");
+    listmem=senderProject[3].split("  ");
+
+    if(UserName!=listadmin[0]){
+        return;
+    }
+
+
+//------------------------------------------------
+
+    QString add=ui->led_add_adm->text();
+    if(add==""){
+
+       ui->led_add_adm->setStyleSheet("background-color:red;");
+
+       ui->led_add_adm->setText("The  name cannot be empty");
+
+       QTimer::singleShot(4000,[=](){
+          ui->led_add_adm->setStyleSheet("background-color:white;");
+           ui->led_add_adm->setText("");
+
+       });
+
+       return;
+   }
+//------------------------------------------------------------------------------------
+
+    QFile f("userinformation.txt");
+
+    f.open(QIODevice::ReadOnly | QIODevice::Text);
+ QString useread( f.readAll());
+ f.close();
+
+ QStringList listuser;
+ listuser=useread.split(" ");
+
+ // سه تا ورودی تو ساین آپ گرفتیم دیگه
+ for(int i=0;i<listuser.length();i+=3){
+     if(add==listuser[i]){
+
+     break;
+     }
+
+     else{
+
+         if(i==listuser.length()-1){
+         ui->led_add_adm->setStyleSheet("background-color:red;");
+
+          ui->led_add_adm->setText("The username not found");
+
+          QTimer::singleShot(4000,[=](){
+             ui->led_add_adm->setStyleSheet("background-color:white;");
+              ui->led_add_adm->setText("");
+
+
+          });
+          return;
+         }
+
+     }
 
 }
+ //------------------------------------------------------------------------------------
+for(int i=0;i<listadmin.length();i++){
+
+    if(listadmin[i]==add){
+        return;
+    }
+
+}
+
+myproject.newAdmin(add);
+
+
+f2.open(QIODevice::WriteOnly | QIODevice::Text);
+
+QTextStream out(&f2);
+
+for(int i=0;i<listtask.length();i++){
+
+    out<<listtask[i]<<"  ";
+}
+out<<"\n";
+
+for(int i=0;i<listcomment.length();i++){
+
+    out<<listcomment[i]<<"  ";
+}
+ out<<"\n";
+
+ for(int i=0;i<listadmin.length();i++){
+if(listadmin[i]==""){
+continue;
+}
+     out<<listadmin[i]<<"  ";
+ }
+ out<<add<<"  ";
+  out<<"\n";
+
+  for(int i=0;i<listmem.length();i++){
+
+      out<<listmem[i]<<"  ";
+  }
+   out<<"\n";
+
+   ui->led_add_adm->setStyleSheet("background-color:green;");
+
+   QTimer::singleShot(3000,[=](){
+      ui->led_add_adm->setStyleSheet("background-color:white;");
+       ui->led_add_adm->setText("");
+
+   });
+
+}
+
+
 

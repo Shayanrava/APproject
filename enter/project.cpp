@@ -73,18 +73,11 @@ admins_of_projects.new_admin(Name);
 
 void project::newAdmin(QString NewName)
 {
-for(int i=0;i<personels.length();i++){
 
-    if(personels[i]==NewName){
 
        admins_of_projects.new_admin(NewName);
 
-       return;
-    }
 
-
-
-}
 
 
 }
