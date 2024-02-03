@@ -1,4 +1,5 @@
 QT       += core gui
+QT       +=network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,6 +17,7 @@ SOURCES += \
     admins.cpp \
     change_member_task_in_project.cpp \
     change_member_task_in_team.cpp \
+    client.cpp \
     comment.cpp \
     delete_project_before.cpp \
     delete_team_before.cpp \
@@ -53,6 +55,7 @@ HEADERS += \
     admins.h \
     change_member_task_in_project.h \
     change_member_task_in_team.h \
+    client.h \
     comment.h \
     delete_project_before.h \
     delete_team_before.h \
