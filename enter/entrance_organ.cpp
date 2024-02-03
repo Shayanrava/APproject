@@ -4,6 +4,7 @@
 #include"removing_organization.h"
 #include"filtering_organizations.h"
 #include"key_pass_organ.h"
+#include"viewtask.h"
 entrance_organ::entrance_organ(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::entrance_organ)
@@ -126,6 +127,8 @@ void entrance_organ::on_pbn_login_clicked()
 
 void entrance_organ::on_pbn_view_clicked()
 {
+     ui->textEdit->clear();
+
  QFile f(userName+".txt");
 
  f.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -189,6 +192,8 @@ ui->textEdit->append(listuse2[i]);
 
 void entrance_organ::on_pbn_sort_clicked()
 {
+
+     ui->textEdit_3->clear();
     QFile f(userName+".txt");
 
     f.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -255,5 +260,13 @@ void entrance_organ::on_pbn_sort_clicked()
 
    }
 
+}
+
+
+void entrance_organ::on_pbn_viewOrgan_clicked()
+{
+    viewTask* vtk=new viewTask();
+    vtk->setUserName(userName);
+    vtk->show();
 }
 

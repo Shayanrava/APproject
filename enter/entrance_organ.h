@@ -36,6 +36,8 @@ private slots:
 
     void on_pbn_sort_clicked();
 
+    void on_pbn_viewOrgan_clicked();
+
 private:
     QString userName;
 
