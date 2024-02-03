@@ -59,26 +59,69 @@ void making_decision_for_organ::setOrganName(QString Name){
 
           ui->lbl_access->setStyleSheet("background-color:red;");
 
+          ui->label_2->setStyleSheet("background-color:red;");
+
+          ui->label_3->setStyleSheet("background-color:red;");
+
+          ui->label_4->setStyleSheet("background-color:red;");
+
+          ui->label_5->setStyleSheet("background-color:red;");
+
           ui->lbl_access->setText("you can't access it");
+
+          ui->label_2->setText("you can't access it");
+
+          ui->label_3->setText("you can't access it");
+
+          ui->label_4->setText("you can't access it");
+
+          ui->label_5->setText("you can't access it");
 
       }
       else{
           ui->lbl_access->setStyleSheet("background-color:green;");
 
-          ui->lbl_access->setText("you can access it");}
+          ui->label_2->setStyleSheet("background-color:green;");
+
+          ui->label_3->setStyleSheet("background-color:green;");
+
+          ui->label_4->setStyleSheet("background-color:green;");
+
+          ui->label_5->setStyleSheet("background-color:green;");
+
+          ui->lbl_access->setText("you can access it");
+
+          ui->label_2->setText("you can access it");
+
+          ui->label_3->setText("you can access it");
+
+          ui->label_4->setText("you can access it");
+
+          ui->label_5->setText("you can access it");
+      }
 
 }
 
 void making_decision_for_organ::on_add_project_clicked()
 {
+    if(ui->lbl_access->text()=="you can't access it"){
+        return;
+   }
     add_project_before *apb=new add_project_before();
+    apb->setOrganName(orgaName);
+    apb->setUserName(UserName);
     apb->show();
 }
 
 
 void making_decision_for_organ::on_delete_project_clicked()
 {
+    if(ui->lbl_access->text()=="you can't access it"){
+        return;
+    }
     delete_project_before *dpb=new delete_project_before();
+    dpb->setOrganName(orgaName);
+    dpb->setUserName(UserName);
     dpb->show();
 
 }
@@ -86,14 +129,24 @@ void making_decision_for_organ::on_delete_project_clicked()
 
 void making_decision_for_organ::on_add_team_clicked()
 {
+    if(ui->lbl_access->text()=="you can't access it"){
+        return;
+    }
     add_team_before *atb=new add_team_before();
+    atb->setOrganName(orgaName);
+    atb->setUserName(UserName);
     atb->show();
 }
 
 
 void making_decision_for_organ::on_delete_team_clicked()
 {
+    if(ui->lbl_access->text()=="you can't access it"){
+        return;
+    }
     delete_team_before *dtb=new delete_team_before();
+    dtb->setOrganName(orgaName);
+    dtb->setUserName(UserName);
     dtb->show();
 }
 
@@ -123,6 +176,7 @@ void making_decision_for_organ::on_project_clicked()
     key_project_before *kpb=new key_project_before();
 
         kpb->setOrganName(orgaName);
+
         kpb->setUserName(UserName);
 
         kpb->show();

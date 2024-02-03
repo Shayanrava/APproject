@@ -224,8 +224,8 @@ order:1px solid yellow;
   <widget class="QLabel" name="lbl_access">
    <property name="geometry">
     <rect>
-     <x>890</x>
-     <y>530</y>
+     <x>790</x>
+     <y>520</y>
      <width>181</width>
      <height>31</height>
     </rect>
@@ -237,6 +237,58 @@ background-color:white;
 padding:30px
 
 }</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>290</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>220</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>140</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>80</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
    </property>
    <property name="text">
     <string>TextLabel</string>
