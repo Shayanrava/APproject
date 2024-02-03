@@ -1,18 +1,18 @@
-#ifndef CLIENT_H
-#define CLIENT_H
-#include <qtcpsocket.h>
+//#ifndef CLIENT_H
+//#define CLIENT_H
+//#include <qtcpsocket.h>
 
-class client
-{
-    QTcpSocket *socket = nullptr;
+//class client
+//{
+//    QTcpSocket *socket = nullptr;
 
-public:
-
-
-    void socket_readyRead();
+//public:
 
 
-    client();
-};
+//    void socket_readyRead();
 
-#endif // CLIENT_H
+
+//    client();
+//};
+
+//#endif // CLIENT_H
