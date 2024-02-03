@@ -53,7 +53,7 @@ void making_decision_for_organ::setOrganName(QString Name){
       listadmin=listuse[0].split("  ");
 
 
- qDebug()<<listadmin[0]<<" "<<orgaName;
+// qDebug()<<listadmin[0]<<" "<<orgaName;
 
       if(listadmin[0]!=UserName){
 

@@ -32,6 +32,8 @@ private slots:
 
     void on_pbn_login_clicked();
 
+    void on_pbn_view_clicked();
+
 private:
     QString userName;
 

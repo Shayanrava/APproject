@@ -57,3 +57,66 @@ void entrance_organ::on_pbn_login_clicked()
     kpo->show();
 }
 
+
+void entrance_organ::on_pbn_view_clicked()
+{
+ QFile f(userName+".txt");
+
+ f.open(QIODevice::ReadOnly | QIODevice::Text);
+
+ QString useRead= f.readAll();
+
+ f.close();
+
+
+ QStringList listuse;
+
+ listuse=useRead.split("  ");
+
+
+ f.open(QIODevice::WriteOnly | QIODevice::Text);
+
+ f.resize(0);
+
+ QTextStream out(&f);
+
+ for(int i=0;i<listuse.length();i++){
+     if(listuse[i]==""){
+         continue;
+     }
+
+    out<<listuse[i]<<"  ";
+
+ }
+
+ f.close();
+
+ f.open(QIODevice::ReadOnly | QIODevice::Text);
+
+ QString useRead2= f.readAll();
+
+ f.close();
+
+
+ QStringList listuse2;
+
+ listuse2=useRead2.split("  ");
+
+
+
+
+
+for(int i=0;i<listuse2.length();i+=5){
+
+//    if(listuse2[i]==""){
+//        i-=4;
+//        continue;
+//    }
+
+ui->textEdit->append(listuse2[i]);
+
+}
+
+
+}
+

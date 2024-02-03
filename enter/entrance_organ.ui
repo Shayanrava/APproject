@@ -22,7 +22,7 @@ background-color:black;
   <widget class="QLabel" name="label_do">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>420</x>
      <y>300</y>
      <width>351</width>
      <height>41</height>
@@ -42,8 +42,8 @@ font-size:30px;
   <widget class="QPushButton" name="pbn_login">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>160</y>
+     <x>10</x>
+     <y>250</y>
      <width>371</width>
      <height>41</height>
     </rect>
@@ -68,8 +68,8 @@ font-size:25px;
   <widget class="QPushButton" name="pbn_removing">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>230</y>
+     <x>10</x>
+     <y>200</y>
      <width>371</width>
      <height>41</height>
     </rect>
@@ -94,8 +94,8 @@ font-size:25px;
   <widget class="QPushButton" name="pbn_sort">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>530</y>
+     <x>790</x>
+     <y>570</y>
      <width>361</width>
      <height>41</height>
     </rect>
@@ -120,8 +120,8 @@ font-size:25px;
   <widget class="QPushButton" name="pbn_filter">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>450</y>
+     <x>10</x>
+     <y>570</y>
      <width>361</width>
      <height>41</height>
     </rect>
@@ -146,8 +146,8 @@ font-size:25px;
   <widget class="QPushButton" name="pbn_making">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>88</y>
+     <x>10</x>
+     <y>100</y>
      <width>371</width>
      <height>41</height>
     </rect>
@@ -173,8 +173,8 @@ font-size:25px;
   <widget class="QPushButton" name="pbn_view">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>370</y>
+     <x>790</x>
+     <y>220</y>
      <width>361</width>
      <height>41</height>
     </rect>
@@ -199,8 +199,8 @@ font-size:25px;
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>22</x>
-     <y>20</y>
+     <x>20</x>
+     <y>10</y>
      <width>161</width>
      <height>21</height>
     </rect>
@@ -222,8 +222,8 @@ font-size:25px;
   <widget class="QPushButton" name="pbn_viewOrgan">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>20</y>
+     <x>10</x>
+     <y>150</y>
      <width>371</width>
      <height>41</height>
     </rect>
@@ -243,6 +243,46 @@ order:1px solid yellow;
    </property>
    <property name="text">
     <string>Viewing an organization</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>30</y>
+     <width>361</width>
+     <height>181</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>360</y>
+     <width>361</width>
+     <height>141</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>370</y>
+     <width>361</width>
+     <height>191</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>520</y>
+     <width>361</width>
+     <height>41</height>
+    </rect>
    </property>
   </widget>
  </widget>
